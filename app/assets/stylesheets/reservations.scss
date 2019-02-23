@@ -1,0 +1,389 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "utf-8";
+
+$pc: 760px; // PC
+$sp: 0; // スマホ
+
+@mixin pc {
+    @media (min-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (min-width: ($sp)) and (max-width:($pc)) {
+        @content;
+    }
+}
+
+header {
+    padding-top: 3px;
+    padding-left: 5px;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+    box-sizing: border-box;
+
+    .header-logo {
+        flex-basis: 25%;
+
+        img {
+            width: 110px;
+            height: auto;
+        }
+    }
+
+    .topic-list {
+        @include pc {
+            flex-basis: 50%;
+            margin-top: 30px;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    a {
+                        color: #a88d49;
+                        text-decoration: none;
+                        text-align: center;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+        }
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    .preserve {
+        flex-basis: 25%;
+        padding-top: 10px;
+
+        input {
+            width: 110px;
+            height: 50px;
+            background-color: rgb(206, 165, 64);
+            font-size: 16px;
+            color: white;
+            border: none;
+        }
+    }
+}
+
+main {
+    box-sizing: border-box;
+
+    .top-image {
+        // background: url("image/top.jpeg");
+        // background-attachment: fixed;
+        // background-repeat: no-repeat;
+
+        // @include pc {
+        //   height: 400px;
+        //    background-size: cover;
+        // }
+
+        // @include sp {
+        //   height: 250px;
+        //   background-size: contain;
+        position: fixed;
+        z-index: 0;
+
+        img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        // }
+    }
+
+    .wrapper {
+        color: #a88d49;
+        z-index: 1;
+        position: relative;
+        padding-top: 400px;
+
+        .news-section {
+            background-color: hsl(180, 64%, 98%);
+            padding-bottom: 30px;
+            padding-top: 40px;
+
+            .news-content {
+                @include pc {
+                    padding: 50px 30%;
+                }
+
+                @include sp {
+                    padding: 30px 10%;
+                }
+
+                .news-content_part {
+                    margin-bottom: 0.67em;
+                }
+            }
+
+            h2,
+            .subtitle {
+                text-align: center;
+            }
+
+            .news-content_image {
+                position: relative;
+
+                .crape1 {
+                    position: absolute;
+
+                    @include pc {
+                        width: 210px;
+                        left: -10px;
+                        top: -140px;
+                    }
+
+                    @include sp {
+                        width: 100px;
+                        left: -5px;
+                        top: -40px;
+                    }
+                }
+            }
+        }
+
+        .store-section {
+            //    background-color: hsl(180, 64%, 98%);
+            padding-bottom: 30px;
+            padding-top: 40px;
+            background-color: white;
+
+            .store-content {
+                .store-content_text {
+                    @include pc {
+                        width: 40%;
+                    }
+
+                    @include sp {
+                        width: 60%;
+                    }
+
+                    margin: 40px auto;
+                }
+            }
+
+            h2,
+            .subtitle {
+                text-align: center;
+            }
+
+            .store-content_image {
+                position: relative;
+
+                .crape2 {
+                    position: absolute;
+                    right: 0;
+
+                    @include pc {
+                        width: 180px;
+                        bottom: -150px;
+                        right: 0px;
+                    }
+
+                    @include sp {
+                        width: 100px;
+                        bottom: -120px;
+                    }
+                }
+            }
+        }
+
+        .menu-section {
+            background-color: hsl(180, 64%, 98%);
+
+            padding-top: 40px;
+
+            h2,
+            h3,
+            .subtitle {
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 25px;
+                margin-bottom: 30px;
+                margin-top: 20px;
+            }
+
+            .menu-content {
+                padding: 30px 5%; //   background: url("image/menu-back.jpg");
+                //   background-position: center;
+                //   background-repeat: repeat;
+                //   background-size: contain;
+                //  z-index: -1;
+                display: flex;
+                justify-content: space-around;
+
+                @include pc {
+                    flex-direction: row;
+                }
+
+                @include sp {
+                    flex-direction: column;
+                }
+
+                .menu-content1,
+                .menu-content2,
+                .menu-content3 {
+                    padding: 10px 5%;
+                    margin-bottom: 30px;
+
+                    .menu-image {
+                        margin: 30px auto;
+                        text-align: center;
+
+                        img {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    p {
+                        padding: 0 15%;
+                    }
+                }
+            }
+        }
+
+        .instagram-section {
+            padding-top: 40px;
+            // background-color:rgb(255, 251, 252);
+            background-color: white;
+
+            h2,
+            .subtitle {
+                text-align: center;
+            }
+
+            .instagram-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                @include pc {
+                    padding: 40px 10%;
+                }
+
+                @include sp {
+                    padding: 40px 0;
+                }
+
+                .instagram-content_image {
+
+                    @include pc {
+                        flex-basis: 20%;
+                        padding: 0 5px;
+                    }
+
+                    @include sp {
+                        flex-basis: 50%;
+                        padding: 0 3px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+
+    .footer-wrapper {
+        background-color: hsl(180, 64%, 98%);
+        color: #a88d49;
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .footer-content_basic {
+                ul {
+                    list-style: none;
+                }
+
+                h2 {
+                    font-size: 19px;
+                    margin: 10px auto;
+                }
+
+                address {
+                    margin: 10px auto;
+                }
+
+                .content-basic_time {
+                    margin: 10px auto;
+
+                    .annotion {
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                }
+
+                padding: 30px 10%;
+                text-align: center;
+
+                @include pc {
+                    flex-basis: 50%;
+                }
+
+                @include sp {
+                    flex-basis: 100%;
+                }
+            }
+
+            .footer-content_map {
+                overflow: visible;
+
+                @include pc {
+                    margin: 30px auto;
+                }
+
+                @include sp {
+                    margin: 10px auto;
+                }
+
+                iframe {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @include pc {
+                    flex-basis: 40%;
+                    width: 200px;
+                    height: 300px;
+                }
+
+                @include sp {
+                    flex-basis: 100%;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

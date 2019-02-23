@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <%= stylesheet_link_tag "application" %>
+ 
+
+</head>
+
+<body>
+  <%
+=begin%>
+ <div id="loader-bg">
+    <div id="loader">
+      <img src="image/header-logo.jpg" width="180px" height="auto" alt="Now Loading..." />
+    </div>
+  </div> 
+<%
+=end%>
+  <div id="wrap">
+    <header>
+      <div class="header-logo">
+      <%= image_tag  "/header-logo.jpg" %>
+    
+      </div>
+      <div class="topic-list">
+        <ul>
+          <li><a href="#news">Top</a></li>
+          <span class="topic-list_separation">/</span>
+          <li><a href="#store">Store</a></li>
+          <span class="topic-list_separation">/</span>
+          <li><a href="#menu">Menu</a></li>
+          <span class="topic-list_separation">/</span>
+          <li><a href="#instagram">Instagram</a></li>
+        </ul>
+      </div>
+      <!-- 予約ボタン -->
+      <div class="preserve"><%=button_to "予約", {controller: 'reservations', action: 'new'}, {method: :get} %></div>
+    </header>
+    <main>
+      <!-- 背景写真 -->
+      <div class="top-image" id="top">
+        <%= image_tag  "/top.jpeg" %>
+      </div>
+      <div class="wrapper">
+        <div class="news-section">
+          <h2>NEWS</h2>
+          <p class="subtitle">新着情報</p>
+
+          <div class="news-content">
+            <div class="news-content_part">
+              <div class="news-content_date">
+                2018.1.30
+              </div>
+              <div class="news-content_text">
+                リニューアルオープンいたしました。
+              </div>
+            </div>
+            <div class="news-content_part">
+              <div class="news-content_date">
+                2018.1.30
+              </div>
+              <div class="news-content_text">
+                リニューアルオープンいたしました。
+              </div>
+            </div>
+            <div class="news-content_part">
+              <div class="news-content_date">
+                2018.1.30
+              </div>
+              <div class="news-content_text">
+                リニューアルオープンいたしました。
+              </div>
+            </div>
+          </div>
+          <div class="news-content_image">
+           
+            <%= image_tag  "/crape-right.png" , :class=>"crape1" %>
+          </div>
+        </div>
+
+        <div class="store-section" id="store">
+          <h2>STORE</h2>
+          <p class="subtitle">お店について</p>
+
+          <div class="store-content">
+            <div class="store-content_text">
+              <p>
+                「la fete de
+                filles」はフランス語で女子会という意味です。女子会だけでなく、大切な人と時間を過ごすには最高のお店です。このお店ではお手頃なお値段で出来立てクレープやガレットを食べ放題で召し上がれます。また、こちらのお店は完全予約制となります。
+              </p>
+            </div>
+          </div>
+          <div class="store-content_image">
+           <%= image_tag  "/crape2-left.png" , :class=>"crape2" %>
+    
+          </div>
+        </div>
+        <div class="menu-section" id="menu">
+          <h2>MENU</h2>
+          <p class="subtitle">メニュー</p>
+
+          <div class="menu-content">
+            <div class="menu-content1">
+              <div class="menu-image">
+              <%= image_tag  "/menu1.png"%>
+             
+              </div>
+              <h3>Crape</h3>
+              <div class="menu-text">
+                <p>
+                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                </p>
+              </div>
+            </div>
+            <div class="menu-content2">
+              <div class="menu-image">
+                 <%= image_tag  "/menu2.png"%>
+              </div>
+              <h3>Gallet</h3>
+              <div class="menu-text">
+                <p>
+                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                </p>
+              </div>
+            </div>
+            <div class="menu-content3">
+              <div class="menu-image">
+              <%= image_tag  "/menu3.png"%>
+              </div>
+              <h3>Tea</h3>
+              <div class="menu-text">
+                <p>
+                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="instagram-section" id="instagram">
+          <h2>Instagram</h2>
+          <p class="subtitle">インスタグラム</p>
+          <div class="instagram-content">
+
+            <div class="instagram-content_image"><%= image_tag  "/insta01.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta02.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta03.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta04.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta05.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta06.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta01.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta02.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta03.jpg" %></div>
+            <div class="instagram-content_image"><%= image_tag  "/insta04.jpg" %></div>
+          
+          </div>
+          <div class="instagram-bt"><%=button_to "Instagram","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>
+ 
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-content_basic">
+            <h2>La fete de filles （ラ フェット ド フィーユ）</h2>
+            <address>
+              〒152-0022 <br />
+              東京都目黒区柿の木坂1-4-3 パームヒルズ柿の木坂1F
+            </address>
+            <div class="content-basic_time">
+              <ul>
+                <li>【第1部】 11:00〜14:00</li>
+                <li>【第2部】 11:00〜14:00</li>
+                <li>【第3部】 11:00〜14:00</li>
+                <li>【第4部】 11:00〜14:00</li>
+                <li>【第5部】 11:00〜14:00</li>
+                <li>【第6部】 11:00〜14:00</li>
+                <li>【第7部】 11:00〜14:00</li>
+              </ul>
+              <p class="annotion">※日によって一部変更しています。詳しくは予約ページで確認してください</p>
+            </div>
+
+          </div>
+
+          <div class="footer-content_map">
+            <iframe src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=La%20fete%20de%20filles+(map)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <!-- <div>
+              <small><a href="https://embedgooglemaps.com/">https://embedgooglemaps.com/</a></small>
+            </div>
+            <div>
+              <small><a href="http://linkkatalogus1.net">www://linkkatalogus1.net</a></small>
+            </div> -->
+            <style>
+              #gmap_canvas img {
+                max-width: none !important;
+                background: none !important;
+              }
+            </style>
+          </div>
+
+          <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/0s_77eyb7So" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> -->
+        </div>
+      </div>
+    </footer>
+  </div>
+  <%
+=begin%>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var h = $(window).height();
+
+      $('#wrap').css('display', 'none');
+      $('#loader-bg ,#loader').height(h).css('display', 'block');
+    });
+
+    $(window).load(function () { //全ての読み込みが完了したら実行
+      $('#loader-bg').delay(1000).fadeOut(1000);
+      $('#loader').delay(1000).fadeOut(1000);
+      $('#wrap').css('display', 'block');
+    });
+
+    //10秒たったら強制的にロード画面を非表示
+    $(function () {
+      setTimeout('stopload()', 10000);
+    });
+
+    function stopload() {
+      $('#wrap').css('display', 'block');
+      $('#loader-bg').delay(900).fadeOut(800);
+      $('#loader').delay(600).fadeOut(300);
+    }
+  </script> 
+<%
+=end%>
+
+</body>
+
+</html>

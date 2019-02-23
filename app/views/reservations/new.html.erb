@@ -1,0 +1,45 @@
+
+  <h2>NEW RESERVATION</h2>
+
+
+  <div class="form">
+    <%=form_for(@reservation) do |f| %>
+      <div class="label">
+      <%= f.label :schedule, "schedule" %>
+    </div>
+    <div>
+      <%= f.datetime_select :schedule %>
+    </div>      <div class="label">
+      <%= f.label :name, "name" %>
+    </div>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+  
+     <div class="label">
+      <%= f.label :phone, "phone" %>
+    </div>
+    <div>
+      <%= f.text_field :phone %>
+    </div>
+     <div class="label">
+      <%= f.label :email, "mail" %>
+    </div>
+    <div>
+      <%= f.text_field :email %>
+    </div>
+       <div class="label">
+      <%= f.label :remarks, "remark" %>
+    </div>
+    <div>
+      <%= f.text_area :remarks %>
+    </div>
+
+   
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+
+

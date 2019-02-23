@@ -1,0 +1,11 @@
+ <h2>RESERVATIONS</h2>
+   <div class="reservations">
+     <% @reservations.each do |reservation| %>
+     <div class="reservations_reservation_schedule"><%=reservation.schedule%></div>
+     <div class="reservations_reservation_name"><%=reservation.name%></div>
+     <div class="reservations_reservation_phone"><%=reservation.phone%></div>
+     <div class="reservations_reservation_mail"><%=reservation.email%></div>
+     <div class="reservations_reservation_remark"><%=reservation.remarks%></div>
+
+     <% end %>
+   </div>

@@ -1,0 +1,834 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html,
+address {
+    line-height: 1.5;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    font-family: "Segoe UI Historic",
+        "HGP教科書体",
+        serif;
+    font-weight: normal;
+    font-style: normal;
+    /* box-sizing: border-box; */
+
+
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+html,
+body,
+header,
+main,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+ul,
+li,
+address {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+    color: #a88d49;
+    box-sizing: border-box;
+
+}
+
+p {
+    text-align: left;
+}
+
+
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+    display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+    background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+    border-style: none;
+    width: 100%;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+    display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+
+header {
+    padding-top: 3px;
+    padding-left: 5px;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+header .header-logo {
+    flex-basis: 25%;
+}
+
+header .header-logo img {
+    width: 110px;
+    height: auto;
+}
+
+@media (min-width: 760px) {
+    header .topic-list {
+        flex-basis: 50%;
+        margin-top: 30px;
+    }
+
+    header .topic-list ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .topic-list ul li a {
+        color: #a88d49;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: bottom;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    header .topic-list {
+        display: none;
+    }
+}
+
+header .preserve {
+    flex-basis: 25%;
+    padding-top: 10px;
+}
+
+header .preserve input {
+    width: 110px;
+    height: 50px;
+    background-color: #cea540;
+    font-size: 16px;
+    color: white;
+    border: none;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+main .top-image {
+    position: fixed;
+    z-index: 0;
+}
+
+main .top-image img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .wrapper {
+    color: #a88d49;
+    z-index: 1;
+    position: relative;
+    padding-top: 400px;
+}
+
+main .wrapper .news-section {
+    background-color: #f7fdfd;
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .news-section .news-content {
+        padding: 50px 30%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .news-section .news-content {
+        padding: 30px 10%;
+    }
+}
+
+main .wrapper .news-section .news-content .news-content_part {
+    margin-bottom: 0.67em;
+}
+
+main .wrapper .news-section h2,
+main .wrapper .news-section .subtitle {
+    text-align: center;
+}
+
+main .wrapper .news-section .news-content_image {
+    position: relative;
+}
+
+main .wrapper .news-section .news-content_image .crape1 {
+    position: absolute;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .news-section .news-content_image .crape1 {
+        width: 210px;
+        left: -10px;
+        top: -140px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .news-section .news-content_image .crape1 {
+        width: 100px;
+        left: -5px;
+        top: -40px;
+    }
+}
+
+main .wrapper .store-section {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    background-color: white;
+}
+
+main .wrapper .store-section .store-content .store-content_text {
+    margin: 40px auto;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .store-section .store-content .store-content_text {
+        width: 40%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .store-section .store-content .store-content_text {
+        width: 60%;
+    }
+}
+
+main .wrapper .store-section h2,
+main .wrapper .store-section .subtitle {
+    text-align: center;
+}
+
+main .wrapper .store-section .store-content_image {
+    position: relative;
+}
+
+main .wrapper .store-section .store-content_image .crape2 {
+    position: absolute;
+    right: 0;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .store-section .store-content_image .crape2 {
+        width: 180px;
+        bottom: -150px;
+        right: 0px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .store-section .store-content_image .crape2 {
+        width: 100px;
+        bottom: -120px;
+    }
+}
+
+main .wrapper .menu-section {
+    background-color:rgba(247,253,253,0.9);
+    padding-top: 40px;
+}
+
+main .wrapper .menu-section h2,
+main .wrapper .menu-section h3,
+main .wrapper .menu-section .subtitle {
+    text-align: center;
+}
+
+main .wrapper .menu-section h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+main .wrapper .menu-section .menu-content {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .menu-section .menu-content {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .menu-section .menu-content {
+        flex-direction: column;
+    }
+}
+
+main .wrapper .menu-section .menu-content .menu-content1,
+main .wrapper .menu-section .menu-content .menu-content2,
+main .wrapper .menu-section .menu-content .menu-content3 {
+    padding: 10px 5%;
+    margin-bottom: 30px;
+}
+
+main .wrapper .menu-section .menu-content .menu-content1 .menu-image,
+main .wrapper .menu-section .menu-content .menu-content2 .menu-image,
+main .wrapper .menu-section .menu-content .menu-content3 .menu-image {
+    margin: 30px auto;
+    text-align: center;
+}
+
+main .wrapper .menu-section .menu-content .menu-content1 .menu-image img,
+main .wrapper .menu-section .menu-content .menu-content2 .menu-image img,
+main .wrapper .menu-section .menu-content .menu-content3 .menu-image img {
+    margin: 0 auto;
+    width: 220px;
+}
+
+main .wrapper .menu-section .menu-content .menu-content1 p,
+main .wrapper .menu-section .menu-content .menu-content2 p,
+main .wrapper .menu-section .menu-content .menu-content3 p {
+    padding: 0 15%;
+}
+
+main .wrapper .instagram-section {
+    padding-top: 40px;
+    padding-bottom:40px;
+    background-color: white;
+}
+
+main .wrapper .instagram-section h2,
+main .wrapper .instagram-section .subtitle {
+    text-align: center;
+}
+
+main .wrapper .instagram-section .instagram-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (min-width: 760px) {
+    main .wrapper .instagram-section .instagram-content {
+        padding: 40px 10%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .instagram-section .instagram-content {
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 760px) {
+    main .wrapper .instagram-section .instagram-content .instagram-content_image {
+        flex-basis: 20%;
+        padding: 0 5px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    main .wrapper .instagram-section .instagram-content .instagram-content_image {
+        flex-basis: 50%;
+        padding: 0 3px;
+    }
+}
+
+main .wrapper .instagram-section .instagram-content .instagram-content_image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+main .wrapper .instagram-section .instagram-bt input {
+    width: 110px;
+    height: 50px;
+    background-color: #cea540;
+    font-size: 16px;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+footer {
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+}
+
+footer .footer-wrapper {
+    background-color: #f7fdfd;
+    color: #a88d49;
+}
+
+footer .footer-wrapper .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic {
+    padding: 30px 10%;
+    text-align: center;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic ul {
+    list-style: none;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic h2 {
+    font-size: 19px;
+    margin: 10px auto;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic address {
+    margin: 10px auto;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time {
+    margin: 10px auto;
+}
+
+footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time .annotion {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (min-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_basic {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_basic {
+        flex-basis: 100%;
+    }
+}
+
+footer .footer-wrapper .footer-content .footer-content_map {
+    overflow: visible;
+}
+
+@media (min-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_map {
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_map {
+        margin: 10px auto;
+    }
+}
+
+footer .footer-wrapper .footer-content .footer-content_map iframe {
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_map {
+        flex-basis: 40%;
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    footer .footer-wrapper .footer-content .footer-content_map {
+        flex-basis: 100%;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
