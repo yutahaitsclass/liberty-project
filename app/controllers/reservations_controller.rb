@@ -28,6 +28,6 @@ def index
     
    private
       def reservation_params
-        params.require(:reservation).permit(:schedule, :name, :phone, :mail, :remark)
+        params.require(:reservation).permit(:schedule, :name, :number, :phone, :mail, :remark)
       end
 end

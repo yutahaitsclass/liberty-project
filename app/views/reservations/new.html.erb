@@ -4,12 +4,17 @@
 
   <div class="form">
     <%=form_for(@reservation) do |f| %>
-      <div class="label">
-      <%= f.label :schedule, "schedule" %>
+      <div class="date">
+      <%= f.label :date, "schedule" %>
     </div>
     <div>
-      <%= f.datetime_select :schedule %>
-    </div>      <div class="label">
+      <%= f.date_select( :schedule)%>
+    </div>    
+
+    
+
+
+      <div class="label">
       <%= f.label :name, "name" %>
     </div>
     <div>
