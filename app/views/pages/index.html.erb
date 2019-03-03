@@ -12,15 +12,13 @@
 </head>
 
 <body>
-  <%
-=begin%>
+
  <div id="loader-bg">
     <div id="loader">
-      <img src="image/header-logo.jpg" width="180px" height="auto" alt="Now Loading..." />
+     <%= image_tag  "/header-logo.jpg" %>
     </div>
   </div> 
-<%
-=end%>
+
   <div id="wrap">
     <header>
       <div class="header-logo">
@@ -35,11 +33,11 @@
           <span class="topic-list_separation">/</span>
           <li><a href="#menu">Menu</a></li>
           <span class="topic-list_separation">/</span>
-          <li><a href="#instagram">Instagram</a></li>
+          <li><%= link_to "Instagram",:action=>"index", :anchor => "instagram" %></li>
         </ul>
       </div>
       <!-- 予約ボタン -->
-      <div class="preserve"><%=button_to "予約", {controller: 'reservations', action: 'new'}, {method: :get} %></div>
+      <div class="preserve"><%=button_to "予約",{:controller => "reservations", :action => "reservation_table", :times => 1}, {method: :get} %></div>
     </header>
     <main>
       <!-- 背景写真 -->
@@ -53,30 +51,18 @@
 
           <div class="news-content">
             <div class="news-content_part">
+            <% @posts.first(3).each do |p|%>
               <div class="news-content_date">
-                2018.1.30
+                <%=p.date%>
               </div>
               <div class="news-content_text">
-                リニューアルオープンいたしました。
+                <%=p.content%>
               </div>
+              <%end%>    
             </div>
-            <div class="news-content_part">
-              <div class="news-content_date">
-                2018.1.30
-              </div>
-              <div class="news-content_text">
-                リニューアルオープンいたしました。
-              </div>
-            </div>
-            <div class="news-content_part">
-              <div class="news-content_date">
-                2018.1.30
-              </div>
-              <div class="news-content_text">
-                リニューアルオープンいたしました。
-              </div>
-            </div>
-          </div>
+                  </div>
+
+
           <div class="news-content_image">
            
             <%= image_tag  "/crape-right.png" , :class=>"crape1" %>
@@ -210,18 +196,17 @@
       </div>
     </footer>
   </div>
-  <%
-=begin%>
+
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script>
     $(function () {
-      var h = $(window).height();
+      var h = $(document).height();
 
       $('#wrap').css('display', 'none');
       $('#loader-bg ,#loader').height(h).css('display', 'block');
     });
 
-    $(window).load(function () { //全ての読み込みが完了したら実行
+    $(document).load(function () { //全ての読み込みが完了したら実行
       $('#loader-bg').delay(1000).fadeOut(1000);
       $('#loader').delay(1000).fadeOut(1000);
       $('#wrap').css('display', 'block');
@@ -229,7 +214,7 @@
 
     //10秒たったら強制的にロード画面を非表示
     $(function () {
-      setTimeout('stopload()', 10000);
+      setTimeout('stopload()', 3000);
     });
 
     function stopload() {
@@ -238,8 +223,7 @@
       $('#loader').delay(600).fadeOut(300);
     }
   </script> 
-<%
-=end%>
+
 
 </body>
 

@@ -4,14 +4,9 @@
 
   <div class="form">
     <%=form_for(@reservation) do |f| %>
-      <div class="date">
-      <%= f.label :date, "schedule" %>
-    </div>
-    <div>
-      <%= f.date_select( :schedule)%>
-    </div>    
-
+      
     
+    <%=@datetime.strftime("%Y年%-m月%-d日 %-H:%M")%>
 
 
       <div class="label">
@@ -28,19 +23,30 @@
       <%= f.text_field :phone %>
     </div>
      <div class="label">
-      <%= f.label :email, "mail" %>
+      <%= f.label :email, "email" %>
     </div>
     <div>
       <%= f.text_field :email %>
     </div>
+    
+  <div class="label">
+      <%= f.label :number, "number" %>
+    </div>
+    <div>
+      <%= f.text_field :number %>
+    </div>
+
+
        <div class="label">
-      <%= f.label :remarks, "remark" %>
+      <%= f.label :remarks, "remarks" %>
     </div>
     <div>
       <%= f.text_area :remarks %>
     </div>
 
-   
+    <%= f.hidden_field :schedule, value: @datetime %>
+
+
     <div>
       <%= f.submit %>
     </div>

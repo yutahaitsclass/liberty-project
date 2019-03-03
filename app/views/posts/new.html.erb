@@ -1,0 +1,32 @@
+
+  <h2>NEW POST</h2>
+
+
+  <div class="form">
+    <%=form_for(@post) do |f| %>
+      <div class="date">
+      <%= f.label :date, "schedule" %>
+    </div>
+    <div>
+      <%= f.date_select :date%>
+    </div>    
+    <div class="content">
+    <%= f.label :date, "contetnt" %>
+    </div>
+    <div>
+     <%= f.text_area :content%>
+    </div>
+  
+    
+    
+
+
+
+   
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+
+
