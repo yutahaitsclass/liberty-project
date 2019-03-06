@@ -870,6 +870,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
         text-align: center;
         border: solid 1px #cea540;
         border-collapse: collapse;
+        
 }
 .reservation .reservation-week_links{
 display: flex;
@@ -885,10 +886,26 @@ flex-basis: 30%;
 .reservation td,th {
     border: solid 1px #cea540;
     border-collapse: collapse;
-    padding: 5px 10px;
+    font-size: 25px; 
+    padding: 2vw;   
+    
 }
 
-.reservation a {
+
+
+
+.reservation .empty {
     text-decoration: none;
     font-size: 30px;
+    color: red;
+}
+.reservation .occupied {
+    text-decoration: none;
+    font-size: 30px;
+    color:skyblue;
+}
+.reservation .arrow-btn {
+    text-decoration: none;
+    font-size: 16px;
+    color: #cea540;
 }

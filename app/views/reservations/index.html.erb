@@ -1,13 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <%= stylesheet_link_tag "application" %>
+ 
+
+</head>
+
+<body> 
  <h2>RESERVATIONS</h2>
    <div class="reservation">
    <div class="reservation-week_links">
    <div class="reservation-before_link">
    <% if params[:times].to_i != 1 %>
-      <%= link_to "<-", reservate_path(params[:times].to_i-1) %>
+      <%= link_to "< Last Week", reservate_path(params[:times].to_i-1), class: "arrow-btn" %>
      <% end %>
      </div>
       <div class="reservation-after_link">
-     <%= link_to "->", reservate_path(params[:times].to_i+1) %>
+     <%= link_to "Next Week >", reservate_path(params[:times].to_i+1), class: "arrow-btn" %>
      </div>
      </div>
    
@@ -16,13 +30,13 @@
    <table>
    <tr>
             <th>time</th>
-            <th><%= @firstday %></th>
-            <th><%= @firstday+1 %></th>
-            <th><%= @firstday+2 %></th>
-            <th><%= @firstday+3 %></th>
-            <th><%= @firstday+4 %></th>
-            <th><%= @firstday+5 %></th>
-            <th><%= @firstday+6 %></th>
+            <th><%= "#{(@firstday  ).month}/#{(@firstday  ).day}" %></th>
+            <th><%= "#{(@firstday+1).month}/#{(@firstday+1).day}" %></th>
+            <th><%= "#{(@firstday+2).month}/#{(@firstday+2).day}" %></th>
+            <th><%= "#{(@firstday+3).month}/#{(@firstday+3).day}" %></th>
+            <th><%= "#{(@firstday+4).month}/#{(@firstday+4).day}" %></th>
+            <th><%= "#{(@firstday+5).month}/#{(@firstday+5).day}" %></th>
+            <th><%= "#{(@firstday+6).month}/#{(@firstday+6).day}" %></th>
         </tr>
        <% Reservation::SCHEDULES.each do |s|%>
 
@@ -32,9 +46,13 @@
         <% 7.times do |i| %>
       <%if  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
 
- <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute)  %></td> 
+ <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
    <%else%>
-     <td>×</td> 
+     <td>
+     <div class="occupied">
+     ×
+     </div>
+     </td> 
 <%end%>
          
         <% end %>
@@ -45,3 +63,7 @@
 
      </table>
    </div>
+   
+</body>
+
+</html>

@@ -27,13 +27,13 @@
       </div>
       <div class="topic-list">
         <ul>
-          <li><a href="#news">Top</a></li>
+          <li><%= link_to  "Top", anchor: "news"  %></li>
           <span class="topic-list_separation">/</span>
-          <li><a href="#store">Store</a></li>
+          <li><%= link_to  "Store", anchor: "store" %></li>
           <span class="topic-list_separation">/</span>
-          <li><a href="#menu">Menu</a></li>
+          <li><%= link_to  "Menu", anchor: "menu" %></li>
           <span class="topic-list_separation">/</span>
-          <li><%= link_to "Instagram",:action=>"index", :anchor => "instagram" %></li>
+          <li><%= link_to "Instagram", anchor: "instagram" %></li>
         </ul>
       </div>
       <!-- 予約ボタン -->
@@ -206,7 +206,7 @@
       $('#loader-bg ,#loader').height(h).css('display', 'block');
     });
 
-    $(document).load(function () { //全ての読み込みが完了したら実行
+    $(document).on(‘turbolinks:load’, function() {  //全ての読み込みが完了したら実行
       $('#loader-bg').delay(1000).fadeOut(1000);
       $('#loader').delay(1000).fadeOut(1000);
       $('#wrap').css('display', 'block');
