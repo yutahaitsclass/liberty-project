@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -12,16 +13,16 @@
 </head>
 
 <body> 
- <h2>RESERVATIONS</h2>
-   <div class="reservation">
-   <div class="reservation-week_links">
-   <div class="reservation-before_link">
+ <h2>ADMIN</h2>
+   <div class="admin">
+   <div class="admin-week_links">
+   <div class="admin-before_link">
    <% if params[:times].to_i != 1 %>
-      <%= link_to "< Last Week", reservate_path(params[:times].to_i-1), class: "arrow-btn" %>
+      <%= link_to "< Last Week", admin_path(params[:times].to_i-1), class: "arrow-btn" %>
      <% end %>
      </div>
-      <div class="reservation-after_link">
-     <%= link_to "Next Week >", reservate_path(params[:times].to_i+1), class: "arrow-btn" %>
+      <div class="admin-after_link">
+     <%= link_to "Next Week >", admin_path(params[:times].to_i+1), class: "arrow-btn" %>
      </div>
      </div>
    
@@ -44,12 +45,22 @@
         
         <td><%= s.strftime("%H:%M") %></td>
         <% 7.times do |i| %>
-      <%if  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
-      <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
+      <% info = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
+      <%if info==nil%>
+      <td><%= link_to  "〇", admin_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
       <%else%>
       <td>
-      <div class="occupied">×</div>
-      </td> <%end%>
+      <div class="occupied">×
+      <div class="occupied-hover_action">
+      <ul>
+        <li> <%=info.name%></li>
+        <li> <%=info.phone%></li>
+        <li> <%=info.email%></li>
+      </ul>
+      </div>
+      </div>
+      </td> 
+      <%end%>
          
         <% end %>
         </tr>
@@ -62,4 +73,4 @@
    
 </body>
 
-</html>
+</html> 

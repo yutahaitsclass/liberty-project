@@ -1,0 +1,56 @@
+
+  <h2>NEW RESERVATION</h2>
+
+
+  <div class="form">
+    <%=form_for(@reservation) do |f| %>
+      
+    
+    <%=@datetime.strftime("%Y年%-m月%-d日 %-H:%M")%>
+
+
+      <div class="label">
+      <%= f.label :name, "name" %>
+    </div>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+  
+     <div class="label">
+      <%= f.label :phone, "phone" %>
+    </div>
+    <div>
+      <%= f.text_field :phone %>
+    </div>
+     <div class="label">
+      <%= f.label :email, "email" %>
+    </div>
+    <div>
+      <%= f.text_field :email %>
+    </div>
+    
+  <div class="label">
+      <%= f.label :number, "number" %>
+    </div>
+    <div>
+      <%= f.text_field :number %>
+    </div>
+
+
+       <div class="label">
+      <%= f.label :remarks, "remarks" %>
+    </div>
+    <div>
+      <%= f.text_area :remarks %>
+    </div>
+
+    <%= f.hidden_field :schedule, value: @datetime %>
+
+
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+
+

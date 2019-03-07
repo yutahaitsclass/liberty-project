@@ -887,7 +887,8 @@ flex-basis: 30%;
     border: solid 1px #cea540;
     border-collapse: collapse;
     font-size: 25px; 
-    padding: 2vw;   
+    width: 70px;  
+    height: 70px; 
     
 }
 
@@ -905,6 +906,76 @@ flex-basis: 30%;
     color:skyblue;
 }
 .reservation .arrow-btn {
+    text-decoration: none;
+    font-size: 16px;
+    color: #cea540;
+}
+
+
+/* admin */
+.admin table {
+    margin: 30px auto;
+    text-align: center;
+    border: solid 1px #cea540;
+    border-collapse: collapse;
+
+}
+
+.admin .admin-week_links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin .admin-before_link {
+    flex-basis: 30%;
+
+}
+
+.admin .admin-after_link {
+    flex-basis: 30%;
+}
+
+.admin td,
+th {
+    border: solid 1px #cea540;
+    border-collapse: collapse;
+    font-size: 25px;
+    width: 70px;
+    height: 70px;
+
+}
+
+
+
+
+.admin .empty {
+    text-decoration: none;
+    font-size: 30px;
+    color: red;
+}
+
+
+.admin .occupied {
+    position: relative;
+    font-size: 30px;
+    color: skyblue;
+}
+
+.admin .occupied-hover_action {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    display: none;
+    background-color: white;
+    padding: 20px 30px;
+    font-size:16px;
+}
+
+.admin .occupied:hover .occupied-hover_action {
+    display: block;
+}
+
+.admin .arrow-btn {
     text-decoration: none;
     font-size: 16px;
     color: #cea540;

@@ -1,9 +1,7 @@
 class ReservationsController < ApplicationController
     def reservation_table
-              @reservations = Reservation.all
+             @reservations = Reservation.all
              @firstday=Date.today+(params[:times].to_i-1)*7
-       
-         
          render 'index'
     end  
 
