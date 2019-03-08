@@ -205,8 +205,12 @@
       $('#wrap').css('display', 'none');
       $('#loader-bg ,#loader').height(h).css('display', 'block');
     });
-
-    $(document).on(‘turbolinks:load’, function() {  //全ての読み込みが完了したら実行
+ <%
+=begin%>
+ $(document).on(‘turbolinks:load’,  
+<%
+=end%>
+    $(function() {  //全ての読み込みが完了したら実行
       $('#loader-bg').delay(1000).fadeOut(1000);
       $('#loader').delay(1000).fadeOut(1000);
       $('#wrap').css('display', 'block');

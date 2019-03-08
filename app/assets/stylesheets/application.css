@@ -883,13 +883,29 @@ justify-content: space-around;
 .reservation .reservation-after_link {
 flex-basis: 30%;
 }
-.reservation td,th {
-    border: solid 1px #cea540;
-    border-collapse: collapse;
-    font-size: 25px; 
-    width: 70px;  
-    height: 70px; 
-    
+
+@media (min-width: 760px) {
+  .reservation td,
+  .reservation th {
+      border: solid 1px #cea540;
+      border-collapse: collapse;
+      font-size: 25px;
+      width: 7vw;
+      height: 4vw;
+
+  }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    .reservation td,
+    .reservation th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 16px;
+        width: 11vw;
+        height: 11vw;
+
+    }
 }
 
 
@@ -979,4 +995,37 @@ th {
     text-decoration: none;
     font-size: 16px;
     color: #cea540;
+}
+
+
+/* new-reservation */
+
+.new-reservation .new-reservation_header img{
+width: 160px;
+} 
+.new-reservation .new-reservation_header  h2{
+    margin: 10px auto;
+}
+
+.new-reservation .new-reservation_form{
+    margin-top:30px; 
+}
+.new-reservation .new-reservation_form .reservation-form_content{
+    margin: 20px auto;
+    padding: 5px;
+    /* color: #cea540; */
+    border-style:ridge;
+    /* border-bottom: solid 0.5px  #b4891b; */
+    border-radius:6px; 
+    border-width: 1px;
+}
+
+.new-reservation .new-reservation_form #reservation_number{
+      padding: 5px;
+          margin: 20px auto;
+      /* color: #cea540; */
+      border-style:ridge;
+      /* border-bottom: solid 0.5px  #b4891b; */
+      border-radius:6px;
+      border-width: 1px;
 }
