@@ -15,7 +15,7 @@
 <div class="new-reservation">
 <div class="new-reservation_header">
  <%= image_tag  "/header-logo.jpg" %>
-  <h2>予約</h2>
+  <h2>予約日時</h2>
  <%=@datetime.strftime("%Y年%-m月%-d日 %-H:%M")%>
 </div>
 
@@ -42,7 +42,8 @@
     </div>
     
   <div class="label">
-      <%= f.label :number, "予約人数(3名以上の方は電話にてご予約をお願いします。)" %>
+      <%= f.label :number, "予約人数(3名以上は電話で予約)" %>
+  
     </div>
     <div>
     <% options =[1,2]%>
@@ -51,9 +52,10 @@
 
 
        <div class="label">
-      <%= f.label :remarks, "備考欄" %>
+      <%= f.label :remarks, "備考欄(アレルギーや特別メニューについて)" %>
     </div>
     <div>
+      
       <%= f.text_area :remarks, class: "reservation-form_content" %>
     </div>
 

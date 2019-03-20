@@ -10,26 +10,29 @@
  
 
 </head>
-
+ 
 <body> 
- <h2>RESERVATIONS</h2>
    <div class="reservation">
+    <% if flash[:notice] %>
+      <div class="reservation-flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+   <%= image_tag  "/header-logo.jpg" %>
+   <h2>予約一覧</h2>
    <div class="reservation-week_links">
    <div class="reservation-before_link">
    <% if params[:times].to_i != 1 %>
-      <%= link_to "< Last Week", reservate_path(params[:times].to_i-1), class: "arrow-btn" %>
+      <%= link_to "≪前の週へ", reservate_path(params[:times].to_i-1), class: "arrow-btn" %>
      <% end %>
      </div>
       <div class="reservation-after_link">
-     <%= link_to "Next Week >", reservate_path(params[:times].to_i+1), class: "arrow-btn" %>
+     <%= link_to "次の週へ≫" , reservate_path(params[:times].to_i+1), class: "arrow-btn" %>
      </div>
      </div>
-   
- 
-   
    <table>
    <tr>
-            <th>time</th>
+            <th>日程</th>
             <th><%= "#{(@firstday  ).month}/#{(@firstday  ).day}" %></th>
             <th><%= "#{(@firstday+1).month}/#{(@firstday+1).day}" %></th>
             <th><%= "#{(@firstday+2).month}/#{(@firstday+2).day}" %></th>
@@ -42,7 +45,7 @@
 
         <tr>
         
-        <td><%= s.strftime("%H:%M") %></td>
+        <td><%= "#{s.strftime("%H:%M")}~#{(s +Rational(3, 24) ).strftime("%H:%M")} "%></td>
         <% 7.times do |i| %>
       <%if  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
       <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 

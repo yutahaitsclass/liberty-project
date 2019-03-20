@@ -11,31 +11,37 @@ class ReservationsController < ApplicationController
     def new
         @reservation=Reservation.new
         @datetime = DateTime.new(params[:year].to_i, params[:month].to_i,params[:day].to_i,params[:hour].to_i,params[:minute].to_i)
-        
-
     end
 
     def create
         @reservation = Reservation.new(reservation_params)
         if @reservation.save
             redirect_to root_url
-            # render plain: params.inspect/
+            # render plain: params.inspect
         else
-            render "new"
+           flash[:notice] = "　予約内容に間違いがありました。再度、入力お願いします。"
+           redirect_to "/reservate/1"
+            
+
         end
     end
-    def show
-        #  @post = Post.find(params[:id])
-    end
+   
     
     def destroy
-        @post = Post.find(params[:id])
-        @post.destroy
-        redirect_to posts_path
+        # @reservation=Reservation.find(delete_params)
+        # @reservation.destroy
+        # redirect_to root_url
+        render plain: params.inspect
     end
     
    private
       def reservation_params
         params.require(:reservation).permit(:schedule, :name, :number, :phone, :email, :remarks)
       end
+
+      def delete_params
+         params.require(:reservation).permit(:id)
+      end
+
+    
 end

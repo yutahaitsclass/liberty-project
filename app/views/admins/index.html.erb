@@ -11,26 +11,21 @@
  
 
 </head>
-
 <body> 
- <h2>ADMIN</h2>
+ <h2>管理者画面</h2>
    <div class="admin">
    <div class="admin-week_links">
    <div class="admin-before_link">
    <% if params[:times].to_i != 1 %>
-      <%= link_to "< Last Week", admin_path(params[:times].to_i-1), class: "arrow-btn" %>
+      <%= link_to "≪前の週へ", adm_path(params[:times].to_i-1), class: "arrow-btn" %>
      <% end %>
      </div>
       <div class="admin-after_link">
-     <%= link_to "Next Week >", admin_path(params[:times].to_i+1), class: "arrow-btn" %>
+     <%= link_to "次の週へ≫", adm_path(params[:times].to_i+1), class: "arrow-btn" %>
      </div>
      </div>
-   
- 
-   
    <table>
-   <tr>
-            <th>time</th>
+   <tr>     <th>time</th>
             <th><%= "#{(@firstday  ).month}/#{(@firstday  ).day}" %></th>
             <th><%= "#{(@firstday+1).month}/#{(@firstday+1).day}" %></th>
             <th><%= "#{(@firstday+2).month}/#{(@firstday+2).day}" %></th>
@@ -40,22 +35,22 @@
             <th><%= "#{(@firstday+6).month}/#{(@firstday+6).day}" %></th>
         </tr>
        <% Reservation::SCHEDULES.each do |s|%>
-
-        <tr>
-        
-        <td><%= s.strftime("%H:%M") %></td>
+        <tr>  
+        <td><%= "#{s.strftime("%H:%M")}~#{(s +Rational(3, 24) ).strftime("%H:%M")} "%></td>
         <% 7.times do |i| %>
-      <% info = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
-      <%if info==nil%>
-      <td><%= link_to  "〇", admin_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
+      <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
+      <%if reservation==nil%>
+      <td><%= link_to  "〇", adm_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
       <%else%>
       <td>
       <div class="occupied">×
       <div class="occupied-hover_action">
       <ul>
-        <li> <%=info.name%></li>
-        <li> <%=info.phone%></li>
-        <li> <%=info.email%></li>
+        <li><%=reservation.name%></li>
+        <li><%=reservation.phone%></li>
+        <li><%=reservation.email%></li>
+        <li><%=reservation.number%>人</li>
+         <li><%= link_to  "削除",  reservation_path(reservation),   method: :delete, class: "delete"  %></li>
       </ul>
       </div>
       </div>
@@ -65,12 +60,8 @@
         <% end %>
         </tr>
          <% end %>
-      
-     
-
      </table>
    </div>
-   
 </body>
 
 </html> 

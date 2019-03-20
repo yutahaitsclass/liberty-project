@@ -1,20 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
 
-  <h2>NEW POST</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <%= stylesheet_link_tag "application" %>
+ 
+
+</head>
+<body>
+<div class="post">
+ <h2>管理者投稿画面</h2>
 
 
-  <div class="form">
+  <div class="post-form">
     <%=form_for(@post) do |f| %>
-      <div class="date">
-      <%= f.label :date, "schedule" %>
+      <div class="post-form_date">
+      <%= f.label :date, "日程" %>
     </div>
     <div>
-      <%= f.date_select :date%>
+      <%= f.date_select :date, :use_month_numbers => true, :start_year => Time.now.year-1 ,:end_year =>Time.now.year+1 %>
     </div>    
-    <div class="content">
-    <%= f.label :date, "contetnt" %>
+    <div class="post-form_content">
+    <%= f.label :date, "投稿内容" %>
     </div>
     <div>
-     <%= f.text_area :content%>
+     <%= f.text_area :content,  :maxlength => "20" %>
     </div>
   
     
@@ -24,9 +37,15 @@
 
    
     <div>
-      <%= f.submit %>
+      <%= f.submit "投稿" %>
     </div>
   <% end %>
 </div>
+</div>
+
+   
+</body>
+
+</html>
 
 

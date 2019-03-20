@@ -27,13 +27,13 @@
       </div>
       <div class="topic-list">
         <ul>
-          <li><%= link_to  "Top", anchor: "news"  %></li>
+          <li><%= link_to  "Top", {anchor: "news"} , {"data-turbolinks" => false} %></li>
           <span class="topic-list_separation">/</span>
-          <li><%= link_to  "Store", anchor: "store" %></li>
+          <li><%= link_to  "Store", {anchor: "store"}, {"data-turbolinks" => false}  %></li>
           <span class="topic-list_separation">/</span>
-          <li><%= link_to  "Menu", anchor: "menu" %></li>
+          <li><%= link_to  "Menu",{ anchor: "menu"}, {"data-turbolinks" => false}  %></li>
           <span class="topic-list_separation">/</span>
-          <li><%= link_to "Instagram", anchor: "instagram" %></li>
+          <li><%= link_to "Instagram", {anchor: "instagram"}, {"data-turbolinks" => false}  %></li>
         </ul>
       </div>
       <!-- 予約ボタン -->
@@ -60,9 +60,7 @@
               </div>
               <%end%>    
             </div>
-                  </div>
-
-
+          </div>
           <div class="news-content_image">
            
             <%= image_tag  "/crape-right.png" , :class=>"crape1" %>
@@ -76,8 +74,7 @@
           <div class="store-content">
             <div class="store-content_text">
               <p>
-                「la fete de
-                filles」はフランス語で女子会という意味です。女子会だけでなく、大切な人と時間を過ごすには最高のお店です。このお店ではお手頃なお値段で出来立てクレープやガレットを食べ放題で召し上がれます。また、こちらのお店は完全予約制となります。
+                日本初のクレープとガレットの食べ放題専門店。30種類を超えるクレープとガレットを3500円というお手頃な価格で堪能できます。さらに、様々な種類のドリンクも飲み放題、サイドメニューも食べ放題となっております。時間は180分とたっぷりあるので、おしゃべりしながら満喫できます。こちらのお店は完全予約制となっているので、予約ページにて予約をお願いします。
               </p>
             </div>
           </div>
@@ -99,7 +96,7 @@
               <h3>Crape</h3>
               <div class="menu-text">
                 <p>
-                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                  手の込んだクレープの味とその色鮮やかな盛り付けはほかのお店では体験できません。
                 </p>
               </div>
             </div>
@@ -110,7 +107,7 @@
               <h3>Gallet</h3>
               <div class="menu-text">
                 <p>
-                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                   パリッとした表面にもちっとした食感、香ばしい香りが口いっぱいに広がるフランスの郷土料理のガレットを食べ放題できます。
                 </p>
               </div>
             </div>
@@ -121,7 +118,7 @@
               <h3>Tea</h3>
               <div class="menu-text">
                 <p>
-                  一品ごとに手の込んだクレープの味と色鮮やかな盛り付けはほかのお店では体験できません。
+                  約40種類の紅茶などを飲み放題で楽しむことができます。食事の後にティータイムを存分に楽しむことができます。
                 </p>
               </div>
             </div>
@@ -199,33 +196,31 @@
 
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script>
-    $(function () {
+   $(function () {
       var h = $(document).height();
 
       $('#wrap').css('display', 'none');
       $('#loader-bg ,#loader').height(h).css('display', 'block');
     });
- <%
-=begin%>
- $(document).on(‘turbolinks:load’,  
-<%
-=end%>
-    $(function() {  //全ての読み込みが完了したら実行
+
+$(function() {  //全ての読み込みが完了したら実行
       $('#loader-bg').delay(1000).fadeOut(1000);
       $('#loader').delay(1000).fadeOut(1000);
       $('#wrap').css('display', 'block');
     });
 
     //10秒たったら強制的にロード画面を非表示
+   
+
     $(function () {
       setTimeout('stopload()', 3000);
     });
 
-    function stopload() {
+   $(function stopload() {
       $('#wrap').css('display', 'block');
       $('#loader-bg').delay(900).fadeOut(800);
       $('#loader').delay(600).fadeOut(300);
-    }
+    });
   </script> 
 
 

@@ -13,4 +13,10 @@ class Reservation < ApplicationRecord
     DateTime.new(2019,1,1,19,00),
     DateTime.new(2019,1,1,20,00)]
 
+
+      validates :name, presence: true
+      validates :email, presence: true
+      validates :phone, presence: true
+      EMAIL_FORMAT=/\A[a-zA-Z0-9_\#!$%&`‘*+\-{|}~^\/=?\.]+@[a-zA-Z0-9][a-zA-Z0-9\.-]+\z/
+      validates :email, format: { with:EMAIL_FORMAT }
 end
