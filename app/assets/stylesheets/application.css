@@ -637,19 +637,26 @@ main .wrapper .menu-section h3 {
 main .wrapper .menu-section .menu-content {
     padding: 30px 5%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 @media (min-width: 760px) {
-    main .wrapper .menu-section .menu-content {
-        flex-direction: row;
-    }
+   main .wrapper .menu-section .menu-content .menu-content1,
+   main .wrapper .menu-section .menu-content .menu-content2,
+   main .wrapper .menu-section .menu-content .menu-content3 {
+      flex-basis: 30%;
+   }
+
 }
 
 @media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .menu-section .menu-content {
-        flex-direction: column;
+    main .wrapper .menu-section .menu-content .menu-content1,
+    main .wrapper .menu-section .menu-content .menu-content2,
+    main .wrapper .menu-section .menu-content .menu-content3 {
+        flex-basis: 100%;
     }
+
 }
 
 main .wrapper .menu-section .menu-content .menu-content1,
@@ -913,10 +920,10 @@ flex-basis: 30%;
     .reservation th {
         border: solid 1px #cea540;
         border-collapse: collapse;
-        font-size: 15px;
+        font-size: 10px;
         width: 10vw;
         height: 10vw;
-        padding:1px;
+        padding:2px;
 
     }
 }
@@ -935,7 +942,7 @@ margin-bottom: 20px;
 .reservation .occupied {
     text-decoration: none;
     font-size: 30px;
-    color:skyblue;
+    color:#cea540;
 }
 .reservation .arrow-btn {
     text-decoration: none;

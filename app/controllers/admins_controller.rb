@@ -6,6 +6,9 @@ class AdminsController < ApplicationController
          render 'index' 
     end
 
+  
+
+
      def new
         @admin_reservation=Reservation.new
         @datetime = DateTime.new(params[:year].to_i, params[:month].to_i,params[:day].to_i,params[:hour].to_i,params[:minute].to_i)

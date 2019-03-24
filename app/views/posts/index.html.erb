@@ -1,0 +1,8 @@
+ <% @posts.first(3).each do |p|%>
+    <div class="news-content_date">
+    <%=p.date%>
+    </div>
+    <div class="news-content_text">
+    <%=p.content%>
+    </div>
+<%end%>    

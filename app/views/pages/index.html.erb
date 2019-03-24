@@ -12,6 +12,11 @@
 </head>
 
 <body>
+ <% if flash[:notice] %>
+      <div class="reservation-flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
  <div id="loader-bg">
     <div id="loader">
@@ -20,6 +25,7 @@
   </div> 
 
   <div id="wrap">
+ 
     <header>
       <div class="header-logo">
       <%= image_tag  "/header-logo.jpg" %>
@@ -96,7 +102,7 @@
               <h3>Crape</h3>
               <div class="menu-text">
                 <p>
-                  手の込んだクレープの味とその色鮮やかな盛り付けはほかのお店では体験できません。
+                  手の込んだクレープの味とその色鮮やかな盛り付けはほかのお店では体験できません。様々なクレープをお手頃な価格で堪能できます。
                 </p>
               </div>
             </div>

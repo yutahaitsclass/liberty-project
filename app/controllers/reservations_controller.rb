@@ -16,6 +16,7 @@ class ReservationsController < ApplicationController
     def create
         @reservation = Reservation.new(reservation_params)
         if @reservation.save
+             flash[:notice] = "予約が完了しました。"
             redirect_to root_url
             # render plain: params.inspect
         else
@@ -28,10 +29,10 @@ class ReservationsController < ApplicationController
    
     
     def destroy
-        # @reservation=Reservation.find(delete_params)
-        # @reservation.destroy
-        # redirect_to root_url
-        render plain: params.inspect
+        @reservation=Reservation.find(params[:id])
+        @reservation.destroy!
+        redirect_to root_url
+        # render plain: params.inspect
     end
     
    private
@@ -39,9 +40,7 @@ class ReservationsController < ApplicationController
         params.require(:reservation).permit(:schedule, :name, :number, :phone, :email, :remarks)
       end
 
-      def delete_params
-         params.require(:reservation).permit(:id)
-      end
+      
 
     
 end
