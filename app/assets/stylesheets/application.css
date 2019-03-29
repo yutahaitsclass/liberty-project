@@ -535,6 +535,7 @@ main .wrapper .news-section {
 
 main .wrapper .news-section .news-content .news-content_part {
     margin-bottom: 0.67em;
+    display: flex;
 }
 
 main .wrapper .news-section h2,
