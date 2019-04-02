@@ -56,16 +56,17 @@
           <p class="subtitle">新着情報</p>
 
           <div class="news-content">
-            <div class="news-content_part">
               <% @posts.first(3).each do |p|%>
-              <div class="news-content_date">
-                <%=p.date%>
+            <div class="news-content_part">
+              
+              <div class="news-content_title">
+                <%=p.title%>
               </div>
               <div class="news-content_text">
-                <%=p.content%>
+                <p><%=p.content%></p>
+              </div>
               </div>
               <%end%>    
-            </div>
           </div>
           <div class="news-content_image">
            
@@ -99,10 +100,12 @@
               <%= image_tag  "/menu1.png"%>
              
               </div>
-              <h3>Crape</h3>
+              <h3>スタンダードコース</h3>
               <div class="menu-text">
-                <p>
-                  手の込んだクレープの味とその色鮮やかな盛り付けはほかのお店では体験できません。様々なクレープをお手頃な価格で堪能できます。
+                <p>出来立てガレット、アートクレープが食べ放題
+                紅茶、コーヒー、ソフトドリンク飲み放題
+                女性¥3,500
+                男性¥4,000
                 </p>
               </div>
             </div>
@@ -110,7 +113,7 @@
               <div class="menu-image">
                  <%= image_tag  "/menu2.png"%>
               </div>
-              <h3>Gallet</h3>
+              <h3>プレミアムコース</h3>
               <div class="menu-text">
                 <p>
                    パリッとした表面にもちっとした食感、香ばしい香りが口いっぱいに広がるフランスの郷土料理のガレットを食べ放題できます。
@@ -121,7 +124,7 @@
               <div class="menu-image">
               <%= image_tag  "/menu3.png"%>
               </div>
-              <h3>Tea</h3>
+              <h3>アニバーサリーメニュー</h3>
               <div class="menu-text">
                 <p>
                   約40種類の紅茶などを飲み放題で楽しむことができます。食事の後にティータイムを存分に楽しむことができます。
@@ -131,20 +134,11 @@
           </div>
         </div>
         <div class="instagram-section" id="instagram">
-          <h2>Instagram</h2>
-          <p class="subtitle">インスタグラム</p>
+          <h2>Q&A</h2>
+          
           <div class="instagram-content">
 
-            <div class="instagram-content_image"><%= image_tag  "/insta01.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta02.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta03.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta04.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta05.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta06.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta01.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta02.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta03.jpg" %></div>
-            <div class="instagram-content_image"><%= image_tag  "/insta04.jpg" %></div>
+           
           
           </div>
           <div class="instagram-bt"><%=button_to "Instagram","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>

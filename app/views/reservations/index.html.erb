@@ -46,10 +46,15 @@
 
         <tr>
         
-        <td><%= "#{s.strftime("%H:%M")}~#{(s +Rational(3, 24) ).strftime("%H:%M")} "%></td>
+        <td><%= "#{s.strftime("%H:%M")}~"%></td>
         <% 7.times do |i| %>
-      <%if  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
+      <%if (@firstday+i).wday==1%>
+         <td>
+      <div class="occupied">休</div>
+      </td> 
+      <%elsif  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
       <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
+
       <%else%>
       <td>
       <div class="occupied">×</div>

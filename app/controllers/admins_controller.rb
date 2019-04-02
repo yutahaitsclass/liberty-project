@@ -1,5 +1,5 @@
 class AdminsController < ApplicationController
-
+before_action :authenticate_user!
     def reservation_table
          @reservations = Reservation.all
          @firstday=Date.today+(params[:times].to_i-1)*7
