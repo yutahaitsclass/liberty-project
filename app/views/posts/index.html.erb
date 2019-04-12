@@ -1,8 +1,24 @@
- <% @posts.first(3).each do |p|%>
-    <div class="news-content_date">
+ <h2>新着情報一覧</h2>
+ <div class="post-list">
+  <% @posts.first(10).each do |p|%>
+ <div class="post-content">
+     <div class="post-content_date">
     <%=p.date%>
     </div>
-    <div class="news-content_text">
+
+     <div class="post-content_title">
+    <%=p.title%>
+    </div>
+
+    <div class="post-content_text">
     <%=p.content%>
     </div>
-<%end%>    
+
+    <div class="post-content_delete">
+    <%=link_to "削除", post_path(p), method: :delete, class:"post-delete_btn"%>
+    </div>
+ </div>
+
+<%end%>   
+ </div>
+ 

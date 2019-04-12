@@ -1,0 +1,35 @@
+
+
+<div class="new-question_answer">
+ <h2>管理者Q&A画面</h2>
+
+
+  <div class="question-answer_form">
+    <%=form_for(@qa) do |f| %>
+    <div class="form-question_content">
+     <div>
+    <%= f.label :question, "質問" %>
+    </div>
+    <div>
+     <%= f.text_area :question %>
+    </div>
+    </div>
+
+    <div class="form-answer_content">
+      <div>
+    <%= f.label :answer, "回答" %>
+    </div>
+    <div>
+     <%= f.text_area :answer %>
+    </div>
+    </div>
+   
+   
+    <div>
+      <%= f.submit "投稿" %>
+    </div>
+  <% end %>
+</div>
+</div>
+
+   

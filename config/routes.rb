@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
    resources :reservations, except: [:edit, :update, :show]
    resources :posts, except: [:edit, :update, :show]
+   resources :question_answers, except: [:edit, :update, :show]
    resources :admins, except: [ :edit, :update, :show]
   root "pages#index"
   get "reservate/:times" => "reservations#reservation_table", as: "reservate"

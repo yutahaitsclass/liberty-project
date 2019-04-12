@@ -39,7 +39,7 @@
           <span class="topic-list_separation">/</span>
           <li><%= link_to  "Menu",{ anchor: "menu"}, {"data-turbolinks" => false}  %></li>
           <span class="topic-list_separation">/</span>
-          <li><%= link_to "Instagram", {anchor: "instagram"}, {"data-turbolinks" => false}  %></li>
+          <li><%= link_to "Q&A", {anchor: "qa"}, {"data-turbolinks" => false}  %></li>
         </ul>
       </div>
       <!-- 予約ボタン -->
@@ -47,11 +47,11 @@
     </header>
     <main>
       <!-- 背景写真 -->
-      <div class="top-image" id="top">
+      <div class="top-image">
         <%= image_tag  "/top.jpeg" %>
       </div>
       <div class="wrapper">
-        <div class="news-section">
+        <div class="news-section" id="news">
           <h2>NEWS</h2>
           <p class="subtitle">新着情報</p>
 
@@ -96,11 +96,12 @@
 
           <div class="menu-content">
             <div class="menu-content1">
+            <h3>スタンダードコース</h3>
               <div class="menu-image">
               <%= image_tag  "/menu1.png"%>
              
               </div>
-              <h3>スタンダードコース</h3>
+              
               <div class="menu-text">
                 <p>出来立てガレット、アートクレープが食べ放題
                 紅茶、コーヒー、ソフトドリンク飲み放題
@@ -110,10 +111,11 @@
               </div>
             </div>
             <div class="menu-content2">
+              <h3>プレミアムコース</h3>
               <div class="menu-image">
                  <%= image_tag  "/menu2.png"%>
               </div>
-              <h3>プレミアムコース</h3>
+            
               <div class="menu-text">
                 <p>
                    パリッとした表面にもちっとした食感、香ばしい香りが口いっぱいに広がるフランスの郷土料理のガレットを食べ放題できます。
@@ -121,10 +123,11 @@
               </div>
             </div>
             <div class="menu-content3">
+             <h3>アニバーサリーメニュー</h3>
               <div class="menu-image">
               <%= image_tag  "/menu3.png"%>
               </div>
-              <h3>アニバーサリーメニュー</h3>
+             
               <div class="menu-text">
                 <p>
                   約40種類の紅茶などを飲み放題で楽しむことができます。食事の後にティータイムを存分に楽しむことができます。
@@ -132,18 +135,32 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="instagram-section" id="instagram">
-          <h2>Q&A</h2>
-          
-          <div class="instagram-content">
-
-           
-          
-          </div>
-          <div class="instagram-bt"><%=button_to "Instagram","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>
+           <div class="instagram-bt"><%=button_to "Instagram","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>
  
         </div>
+        
+
+        <div class="question-answer_section" id="qa">
+        <div class="question-answer_content">
+          <h2>Q&A</h2>
+          
+        <div class="question-answer_lists">
+          <% @qas.first(10).each do |qa|%>
+            <div class="question-answer_list">
+              <div class="question-answer">
+               <p><span class="big">Q</span><%=qa.question%></p>
+              </div>
+              <div class="question-answer">
+               <p><span class="big">A</span><%=qa.answer%></p>
+              </div>
+            </div>
+          <%end%>   
+         </div>
+        </div>
+        
+         
+        </div>
+
       </div>
     </main>
     <footer>

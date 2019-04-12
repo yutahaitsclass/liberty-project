@@ -430,7 +430,10 @@ template {
     display: none;
 }
 
-
+#news, #store, #menu, #qa{
+    padding-top: 100px;
+  
+}
 
 header {
     padding-top: 3px;
@@ -535,8 +538,11 @@ main .wrapper .news-section {
 
 main .wrapper .news-section .news-content .news-content_part {
     margin: 20px auto;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    background-color: aliceblue;
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
 }
 
 main .wrapper .news-section .news-content .news-content_part .news-content_text {
@@ -592,6 +598,10 @@ main .wrapper .store-section {
 
 main .wrapper .store-section .store-content .store-content_text {
     margin: 40px auto;
+    padding: 20px 30px;
+    /* background-color: #f7fdfd; */
+    letter-spacing: 1px;
+    /* box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3); */
 }
 
 @media (min-width: 760px) {
@@ -680,7 +690,10 @@ main .wrapper .menu-section .menu-content {
 main .wrapper .menu-section .menu-content .menu-content1,
 main .wrapper .menu-section .menu-content .menu-content2,
 main .wrapper .menu-section .menu-content .menu-content3 {
-    padding: 10px 5%;
+    /* padding: 10px 5%; */
+     background-color: rgb(250, 248, 250);
+     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+     padding: 30px;
     margin-bottom: 30px;
 }
 
@@ -704,56 +717,45 @@ main .wrapper .menu-section .menu-content .menu-content3 p {
     padding: 0 15%;
 }
 
-main .wrapper .instagram-section {
+main .wrapper .question-answer_section {
     padding-top: 40px;
     padding-bottom:40px;
     background-color: white;
 }
 
-main .wrapper .instagram-section h2,
-main .wrapper .instagram-section .subtitle {
+main .wrapper .question-answer_section h2{
     text-align: center;
 }
 
-main .wrapper .instagram-section .instagram-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 
 @media (min-width: 760px) {
-    main .wrapper .instagram-section .instagram-content {
-        padding: 40px 10%;
+    main .wrapper .question-answer_section .question-answer_content {
+        padding: 40px 20%;
     }
 }
 
 @media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .instagram-section .instagram-content {
-        padding: 40px 0;
+    main .wrapper .question-answer_section .question-answer_content {
+        padding: 40px 5%;
     }
 }
 
-@media (min-width: 760px) {
-    main .wrapper .instagram-section .instagram-content .instagram-content_image {
-        flex-basis: 20%;
-        padding: 0 5px;
-    }
+ main .wrapper .question-answer_section .question-answer_content .question-answer_list{
+     background-color: aliceblue;
+     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+     padding: 10px 20px;
+     margin: 20px auto;
+ }
+
+.big{
+    font-size: 2em;
+    padding: 10px;
 }
 
-@media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .instagram-section .instagram-content .instagram-content_image {
-        flex-basis: 50%;
-        padding: 0 3px;
-    }
-}
 
-main .wrapper .instagram-section .instagram-content .instagram-content_image img {
-    width: 100%;
-    height: auto;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
 
-main .wrapper .instagram-section .instagram-bt input {
+main .wrapper  .instagram-bt input {
     width: 110px;
     height: 50px;
     background-color: #cea540;
@@ -972,6 +974,12 @@ margin-bottom: 20px;
 
 
 /* admin */
+
+.admin {
+    margin-top: 50px;
+    margin-bottom:  300px;
+}
+
 .admin table {
     margin: 30px auto;
     text-align: center;
@@ -1018,7 +1026,7 @@ th {
 .admin .occupied {
     position: relative;
     font-size: 30px;
-    color: skyblue;
+    color: #a88d49;
 }
 
 .admin .occupied-hover_action {
@@ -1178,3 +1186,97 @@ button,[type="submit"]  {
  .post .post-form input[type="submit"]{
      margin-top: 30px;
  }
+
+
+ .post-list .post-content{
+     width: 50%;
+     text-align: center;
+      background-color: aliceblue;
+      box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+      padding: 30px;
+      margin: 20px auto;
+ }
+
+.post-list .post-content .post-content_text,
+.post-list .post-content .post-content_date ,
+.post-list .post-content .post-content_title,
+.post-list .post-content .post-content-delete {
+    margin: 10px auto;
+}
+
+.post-list .post-content .post-content_delete{
+    margin: 15px auto;
+}
+.post-list .post-content .post-content_delete .post-delete_btn{
+    text-decoration: none;
+     color: white;
+     padding: 5px 15px;
+     background-color: #cea540;
+   
+}
+
+
+@media (min-width: 760px) {
+  .question-answer .question-answer_content {
+        padding: 40px 20%;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+  .question-answer .question-answer_content {
+        padding: 40px 5%;
+    }
+}
+
+ .question-answer .question-answer_list {
+    background-color: aliceblue;
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+    padding: 30px 5%;
+    margin: 20px auto;
+}
+.question-answer .question-answer_lists .question-answer_list .question-answer_element {
+   margin: 20px auto;
+}
+
+
+
+
+.question-answer .question-answer_list
+.qa-delete_btn {
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    background-color: #cea540;
+ 
+}
+
+
+.admin-header .admin-header_content{
+display: flex;
+
+}
+
+.admin-header .admin-header_content .admin-header_element{
+    flex-basis: 25%;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    background: #a88d49;
+}
+.admin-header .admin-header_content .admin-header_element:hover{
+    background-color: #cea540;
+}
+
+.admin-header .admin-header_content .admin-header_element a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/*  new-question_answer */
+
+.new-question_answer .question-answer_form .form-question_content textarea,
+.new-question_answer .question-answer_form .form-answer_content textarea {
+ width: 50vw;
+ height: 100px;
+ padding: 10px;
+}

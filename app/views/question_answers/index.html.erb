@@ -1,0 +1,31 @@
+
+<div class="admin-header_section">
+<div class="admin-header_btn">
+
+<%= link_to "Q&A一覧", new_question_answer_path %>
+</div>
+</div>
+ <div class="question-answer">
+ <div class="question-answer_content">
+ <h2></h2>
+ <div class="question-answer_lists">
+  <% @qas.first(10).each do |qa|%>
+  <div class="question-answer_list">
+ 
+
+    <div class="question-answer_element">
+               <p><span class="big">Q</span><%=qa.question%></p>
+              </div>
+    <div class="question-answer_element">
+               <p><span class="big">A</span><%=qa.answer%></p>
+              </div>
+    <div>
+        <%=link_to "削除", question_answer_path(qa), method: :delete, class:"qa-delete_btn"%>
+    </div>
+    </div>
+    <%end%>   
+ </div>
+ </div>
+ 
+ </div>
+ 

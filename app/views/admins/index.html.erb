@@ -12,8 +12,28 @@
 
 </head>
 <body> 
- <h2>管理者画面</h2>
+<div class="admin-header">
+
+ <div class="admin-header_content">
+  <div class="admin-header_element">
+   <%= link_to "トップページ", root_path %>
+  </div>
+   <div class="admin-header_element">
+   <%= link_to "予約", "admins_path" %>
+  </div>
+   <div class="admin-header_element">
+   <%= link_to "新着情報", posts_path	 %>
+  </div>
+   <div class="admin-header_element">
+   <%= link_to "Q&A", question_answers_path %>
+  </div>
+ </div>
+</div>
+
+
+
    <div class="admin">
+    <h2>管理者画面</h2>
    <div class="admin-week_links">
    <div class="admin-before_link">
    <% if params[:times].to_i != 1 %>
@@ -39,11 +59,16 @@
         </tr>
        <% Reservation::SCHEDULES.each do |s|%>
         <tr>  
-        <td><%= "#{s.strftime("%H:%M")}~#{(s +Rational(3, 24) ).strftime("%H:%M")} "%></td>
+        <td><%= "#{s.strftime("%H:%M")}~"%></td>
         <% 7.times do |i| %>
       <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
-      <%if reservation==nil%>
-      <td><%= link_to  "〇", adm_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
+     <%if (@firstday+i).wday==1%>
+         <td>
+      <div class="occupied">休</div>
+      </td> 
+      <%elsif  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
+      <td><%= link_to  "〇", reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %></td> 
+
       <%else%>
       <td>
       <div class="occupied">×
