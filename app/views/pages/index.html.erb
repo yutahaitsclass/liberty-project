@@ -16,7 +16,7 @@
       <div class="reservation-flash">
         <%= flash[:notice] %>
       </div>
-    <% end %>
+  <% end %>
 
  <div id="loader-bg">
     <div id="loader">
@@ -58,7 +58,9 @@
           <div class="news-content">
               <% @posts.first(3).each do |p|%>
             <div class="news-content_part">
-              
+              <div class="news-content_date">
+              <%="#{p.date.year}/#{p.date.month}/#{p.date.day}"%>
+              </div>
               <div class="news-content_title">
                 <%=p.title%>
               </div>
@@ -103,11 +105,18 @@
               </div>
               
               <div class="menu-text">
-                <p>出来立てガレット、アートクレープが食べ放題
-                紅茶、コーヒー、ソフトドリンク飲み放題
-                女性¥3,500
-                男性¥4,000
-                </p>
+             
+              <ul>
+                <li class="menu-list"><h4>コース内容</h4><p class="menu-text_list"><ul>
+                  <li>クレープ１７種類食べ放題 </li>
+                  <li>ガレット１３種類食べ放題</li>
+                  <li>お飲み物７０種類飲み放題</li>
+                </ul></p></li>
+                <li class="menu-list"><h4>コース料金</h4><p class="menu-text_list">3500円 (税込)<br> ※ 男性のお客様  4000円 </p></li>
+                <li class="menu-list"><h4>滞在可能時間</h4><p class="menu-text_list">3時間</p></li>
+              
+              </ul>
+              
               </div>
             </div>
             <div class="menu-content2">
@@ -117,9 +126,16 @@
               </div>
             
               <div class="menu-text">
-                <p>
-                   パリッとした表面にもちっとした食感、香ばしい香りが口いっぱいに広がるフランスの郷土料理のガレットを食べ放題できます。
-                </p>
+                     <ul>
+                         <li class="menu-list"><h4>コース内容</h4><p class="menu-text_list"><ul>
+                  <li>クレープ１７種類食べ放題 </li>
+                  <li>ガレット１３種類食べ放題</li>
+                  <li>お飲み物７０種類飲み放題</li>
+                </ul></p></li>
+                <li class="menu-list"><h4>コース料金</h4><p class="menu-text_list">3500円 (税込)<br> ※ 男性のお客様  4000円 </p></li>
+                <li class="menu-list"><h4>滞在可能時間</h4><p class="menu-text_list">3時間</p></li>
+            
+              </ul>
               </div>
             </div>
             <div class="menu-content3">
@@ -135,7 +151,7 @@
               </div>
             </div>
           </div>
-           <div class="instagram-bt"><%=button_to "Instagram","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>
+           <div class="instagram-bt"><%=button_to "Instagramでメニューを見てみる","https://www.instagram.com/la_fete_de_filles", {method: :get} %></div>
  
         </div>
         

@@ -41,35 +41,71 @@
       <%= f.text_field :email, {class: "reservation-form_content"} %>
     </div>
     
-  <div class="label">
+    <div class="label">
       <%= f.label :number, "予約人数(4名以上は電話で予約)" %>
   
     </div>
     <div>
-    <% options =[2,3]%>
+     <% options =[2,3]%>
       <%= f.select :number, options %>
     </div>
 
 
-       <div class="label">
+    <div class="label">
       <%= f.label :remarks, "備考欄(アレルギーや特別メニューについて)" %>
     </div>
     <div>
       
       <%= f.text_area :remarks, class: "reservation-form_content" %>
     </div>
-
-    <%= f.hidden_field :schedule, value: @datetime %>
-
-
-    <div>
-      <%= f.submit "予約" %>
+    <div class="cancel-policy">
+    <h5>キャンセルポリシー</h5>
+    <p>ご予約につき、下記のキャンセルポリシーを適用いたします。お振込みまたは直接来店にて徴収致します。
+    <ul class="cancel-policy_list">
+      <li>前々日キャンセルの場合&nbsp;&nbsp;30% </li>
+      <li>前日キャンセルの場合&nbsp;&nbsp;50% </li>
+      <li>当日キャンセルの場合&nbsp;&nbsp;100% </li>
+    </ul>
+    キャンセルポリシーに同意した方のみ同意するにチェックを入れご予約下さい
+</p>
     </div>
+     <div class="hidden_box">
+      <label for="label1">同意する</label>
+      <input type="checkbox" id="label1" />
+      <div class="hidden_show">
+          <!--非表示ここから-->
+          <%= f.hidden_field :schedule, value: @datetime %>
+           <%= f.submit "予約", class: "reservation-btn" %>
+          <!--ここまで-->
+      </div>
+    </div>
+        
+  
+         
+          <!--ここまで-->
+     
+  
   <% end %>
 </div>
 
 
 </div>
+<script>
+$(function() {
+  $(document).ready(function() {
+    $('[type="checkbox"]').trigger('change')
+  })
+  $('#checkbox').on('change', '[type="checkbox"]', function() {
+    var target = $(this).attr('target')
+    var property = $(this).prop('checked')
+    if (property) {
+      $('#' + target).css('display', 'initial')
+    } else {
+      $('#' + target).css('display', 'none')
+    }
+  })
+})
+</script>
 </body>
 
 </html>

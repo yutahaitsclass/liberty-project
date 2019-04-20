@@ -68,12 +68,16 @@ address {
     text-align: center;
     color: #a88d49;
     box-sizing: border-box;
+    text-decoration: none;
 
 }
+li{
+    list-style: none;
+}
 
-p {
+/* p {
     text-align: left;
-}
+} */
 
 
 
@@ -601,7 +605,8 @@ main .wrapper .store-section .store-content .store-content_text {
     padding: 20px 30px;
     /* background-color: #f7fdfd; */
     letter-spacing: 1px;
-    /* box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3); */
+    line-height: 2em;
+         box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
 }
 
 @media (min-width: 760px) {
@@ -612,7 +617,7 @@ main .wrapper .store-section .store-content .store-content_text {
 
 @media (min-width: 0) and (max-width: 760px) {
     main .wrapper .store-section .store-content .store-content_text {
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -692,8 +697,8 @@ main .wrapper .menu-section .menu-content .menu-content2,
 main .wrapper .menu-section .menu-content .menu-content3 {
     /* padding: 10px 5%; */
      background-color: rgb(250, 248, 250);
-     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
-     padding: 30px;
+      box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
+     padding: 10px;
     margin-bottom: 30px;
 }
 
@@ -702,6 +707,12 @@ main .wrapper .menu-section .menu-content .menu-content2 .menu-image,
 main .wrapper .menu-section .menu-content .menu-content3 .menu-image {
     margin: 30px auto;
     text-align: center;
+    
+}
+main .wrapper .menu-section .menu-content .menu-content1 .menu-text_list,
+main .wrapper .menu-section .menu-content .menu-content2 .menu-text_list,
+main .wrapper .menu-section .menu-content .menu-content3 .menu-text_list{
+    text-align: center;
 }
 
 main .wrapper .menu-section .menu-content .menu-content1 .menu-image img,
@@ -709,12 +720,29 @@ main .wrapper .menu-section .menu-content .menu-content2 .menu-image img,
 main .wrapper .menu-section .menu-content .menu-content3 .menu-image img {
     margin: 0 auto;
     width: 220px;
+    
 }
+main .wrapper .menu-section .menu-content .menu-content1 .menu-list,
+main .wrapper .menu-section .menu-content .menu-content2 .menu-list,
+main .wrapper .menu-section .menu-content .menu-content3 .menu-list{
+ background-color: rgb(250, 248, 250);
+box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
+ padding: 10px;
+ width: 90%;
+ padding: 20px 10px;
+ margin: 20px auto;
+}
+
 
 main .wrapper .menu-section .menu-content .menu-content1 p,
 main .wrapper .menu-section .menu-content .menu-content2 p,
 main .wrapper .menu-section .menu-content .menu-content3 p {
     padding: 0 15%;
+}
+
+main .wrapper .menu-section .menu-content h4{
+    font-size: 20px;
+    margin: 10px auto;
 }
 
 main .wrapper .question-answer_section {
@@ -729,9 +757,11 @@ main .wrapper .question-answer_section h2{
 
 
 
+
 @media (min-width: 760px) {
     main .wrapper .question-answer_section .question-answer_content {
         padding: 40px 20%;
+        
     }
 }
 
@@ -756,7 +786,7 @@ main .wrapper .question-answer_section h2{
 
 
 main .wrapper  .instagram-bt input {
-    width: 110px;
+    /* width: 110px; */
     height: 50px;
     background-color: #cea540;
     font-size: 16px;
@@ -892,10 +922,15 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 
 /*# sourceMappingURL=style.css.map */
 .reservation-flash{
+    position: fixed;
     background-color: #a88d49;
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
+    top: 0;
+    z-index: 100;
+    right: 0;
+    left: 0;
 }
 .reservation table{
         margin: 30px auto;
@@ -1125,6 +1160,35 @@ width: 160px;
        height:80px;
    }
 }
+@media (min-width: 760px) {
+  .new-reservation .new-reservation_form .cancel-policy {
+      width: 50%;
+  }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+  .new-reservation .new-reservation_form .cancel-policy {
+      width: 80%;
+    }
+}
+.new-reservation .new-reservation_form .cancel-policy h5{
+    font-size: 20px;
+    margin: 10px auto;
+
+}
+.new-reservation .new-reservation_form .cancel-policy {
+   
+    
+line-height: 1.8em;
+    text-align: center;
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+    padding: 30px;
+}
+.new-reservation .new-reservation_form .cancel-policy .cancel-policy_list{
+    margin: 20px auto;
+
+    font-weight: bold;
+}
 
 button,[type="submit"]  {
     margin-bottom: 30px;
@@ -1173,6 +1237,10 @@ button,[type="submit"]  {
      padding:30px;
  }
 
+  .post .post-form .post-form_title {
+      padding: 30px;
+  }
+
   .post .post-form .post-form_content {
       padding: 30px;
   }
@@ -1181,6 +1249,7 @@ button,[type="submit"]  {
       
       width: 50vw;
       height: 100px;
+
   }
 
  .post .post-form input[type="submit"]{
@@ -1213,6 +1282,19 @@ button,[type="submit"]  {
      padding: 5px 15px;
      background-color: #cea540;
    
+}
+.new-post_link{
+    margin: 30px auto;
+}
+.new-post_link a{
+      text-decoration: none;
+       height: 50px;
+       background-color: #cea540;
+       font-size: 16px;
+       color: white;
+       border: none;
+       padding: 10px;
+      
 }
 
 
@@ -1253,15 +1335,31 @@ button,[type="submit"]  {
 
 .admin-header .admin-header_content{
 display: flex;
+flex-wrap: wrap;
 
 }
 
-.admin-header .admin-header_content .admin-header_element{
-    flex-basis: 25%;
-    padding-top: 10px;
-    padding-bottom:10px ;
-    background: #a88d49;
+
+@media (min-width: 760px) {
+    .admin-header .admin-header_content .admin-header_element {
+        flex-basis: 25%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #a88d49;
+    }
+
 }
+
+@media (min-width: 0) and (max-width: 760px) {
+    .admin-header .admin-header_content .admin-header_element {
+        flex-basis: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #a88d49;
+    }
+
+}
+
 .admin-header .admin-header_content .admin-header_element:hover{
     background-color: #cea540;
 }
@@ -1269,6 +1367,24 @@ display: flex;
 .admin-header .admin-header_content .admin-header_element a{
     color: white;
     text-decoration: none;
+    padding: 10px 50px;
+}
+.admin-header_section{
+margin: 20px auto;
+}
+
+.admin-header_section h2{
+    margin: 20px auto;
+}
+.admin-header_section .admin-header_btn a {
+ text-decoration: none;
+ height: 50px;
+ background-color: #cea540;
+ font-size: 16px;
+ color: white;
+ border: none;
+ padding: 10px;
+ margin: 20px auto;
 }
 
 
@@ -1279,4 +1395,58 @@ display: flex;
  width: 50vw;
  height: 100px;
  padding: 10px;
+}
+
+.new-question_answer .question-answer_form .form-question_content{
+    margin: 30px auto;
+}
+
+.new-question_answer .question-answer_form .form-answer_content{
+    margin: 30px auto;
+}
+
+.new-question_answer{
+    margin: 30px auto;
+}
+
+/*全体*/
+.hidden_box {
+    margin: 2em 0;
+    /*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    /* padding: 15px; */
+    font-weight: bold;
+    /* border: solid 2px black; */
+    cursor: pointer;
+}
+
+/*ボタンホバー時*/
+/* .hidden_box label:hover {
+    background: #efefef;
+} */
+
+/*チェックは見えなくする*/
+/* .hidden_box input {
+    display: none;
+} */
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    /* height: 0; */
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked~.hidden_show {
+    padding: 10px 0;
+    margin: 10px auto;
+    
+    opacity: 1;
 }

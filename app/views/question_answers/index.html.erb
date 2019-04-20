@@ -1,8 +1,9 @@
 
 <div class="admin-header_section">
+ <h2>管理者Q&A画面</h2>
 <div class="admin-header_btn">
 
-<%= link_to "Q&A一覧", new_question_answer_path %>
+<%= link_to "Q&A新規投稿",  new_question_answer_path %>
 </div>
 </div>
  <div class="question-answer">
@@ -11,8 +12,6 @@
  <div class="question-answer_lists">
   <% @qas.first(10).each do |qa|%>
   <div class="question-answer_list">
- 
-
     <div class="question-answer_element">
                <p><span class="big">Q</span><%=qa.question%></p>
               </div>
