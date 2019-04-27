@@ -30,6 +30,6 @@ before_action :authenticate_user!
     
      private
       def admin_reservation_params
-        params.require(:admin_reservation).permit(:schedule, :name, :number, :phone, :email, :remarks)
+        params.require(:admin_reservation).permit(:schedule, :name, :number, :phone, :email, :remarks, :menu)
       end
 end

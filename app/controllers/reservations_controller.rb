@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
     def new
         @reservation=Reservation.new
         @datetime = DateTime.new(params[:year].to_i, params[:month].to_i,params[:day].to_i,params[:hour].to_i,params[:minute].to_i)
+        @reservation.remarks ="（アニバーサリーメニュー注文例)"
     end
 
     def create
@@ -37,7 +38,7 @@ class ReservationsController < ApplicationController
     
    private
       def reservation_params
-        params.require(:reservation).permit(:schedule, :name, :number, :phone, :email, :remarks)
+        params.require(:reservation).permit(:schedule, :name, :number, :phone, :email, :remarks, :menu)
       end
 
       
