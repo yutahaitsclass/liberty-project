@@ -5,16 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Lafetedefilles</title>
     <%= stylesheet_link_tag "application" %>
-
+    <meta name="description"
+      content=" La fete de filles（ラ　フェット　ド　フィーユ)ではクレープやガレットが食べ放題で、ドリンクも飲み放題となっています。さらに、カレーやサラダなどのサイドメニューも自由におかわりすることができます。ラグジュアリーな空間でゆっくりとお洒落なクレープの食べ放題を満喫できます！" />
 
   </head>
 
   <body>
-    <% if flash[:notice] %>
+    <% if flash[:text] %>
     <div class="reservation-flash">
-      <%= flash[:notice] %>
+      <%= flash[:text] %>
     </div>
     <% end %>
 
@@ -58,7 +59,7 @@
             <p class="subtitle">新着情報</p>
 
             <div class="news-content">
-              <% @posts.first(3).each do |p|%>
+              <% @posts.first(5).each do |p|%>
               <div class="news-content_part">
                 <div class="news-content_date">
                   <%="#{p.date.year}/#{p.date.month}/#{p.date.day}"%>
@@ -85,7 +86,8 @@
             <div class="store-content">
               <div class="store-content_text">
                 <p>
-                  日本初のクレープとガレットの食べ放題専門店。30種類を超えるクレープとガレットを3500円というお手頃な価格で堪能できます。さらに、様々な種類のドリンクも飲み放題、サイドメニューも食べ放題となっております。時間は180分とたっぷりあるので、おしゃべりしながら満喫できます。こちらのお店は完全予約制となっているので、予約ページにて予約をお願いします。
+                  「La fete de
+                  filles」は日本初のクレープとガレットの食べ放題専門店です。シェフがその場で仕上げた、出来立てのクレープやガレットをお手頃な価格で堪能できます。さらに、様々な種類のドリンクも飲み放題、サイドメニューも食べ放題となっております。独自のスパイスで旨味を強調した熟成カレーやスープ、見た目も華やかなサラダのビュッフェも付いております。　時間は三時間とたっぷりあるので、おしゃべりしながら満喫できます。お城の中にいるかのような非日常空間で、至福のひと時をお楽しみ頂けます。こちらのお店は完全予約制となっているので、予約ページにて予約をお願いします。
                 </p>
               </div>
             </div>
@@ -113,9 +115,10 @@
                       <h4>コース内容</h4>
                       <p class="menu-text_list">
                         <ul>
-                          <li>クレープ１７種類食べ放題 </li>
-                          <li>ガレット１３種類食べ放題</li>
-                          <li>お飲み物７０種類飲み放題</li>
+                          <li>クレープ食べ放題 </li>
+                          <li>ガレット食べ放題</li>
+                          <li>ソフトドリンク飲み放題</li>
+                          <li>サラダ、スープ、カレー食べ放題</li>
                         </ul>
                       </p>
                     </li>
@@ -131,7 +134,7 @@
               <div class="menu-content2">
                 <h3>プレミアムコース</h3>
                 <div class="menu-image">
-                  <%= image_tag  "/menu2.png"%>
+                  <%= image_tag  "/premium.png"%>
                 </div>
 
                 <div class="menu-text">
@@ -140,15 +143,18 @@
                       <h4>コース内容</h4>
                       <p class="menu-text_list">
                         <ul>
-                          <li>クレープ１７種類食べ放題 </li>
-                          <li>ガレット１３種類食べ放題</li>
-                          <li>お飲み物７０種類飲み放題</li>
+                          <li>クレープ食べ放題 </li>
+                          <li>ガレット食べ放題</li>
+                          <li>ソフトドリンク飲み放題</li>
+                          <li>サラダ、スープ、カレー食べ放題</li>
+                          <li>アルコール飲み放題</li>
+
                         </ul>
                       </p>
                     </li>
                     <li class="menu-list">
                       <h4>コース料金</h4>
-                      <p class="menu-text_list">3500円 (税込)<br> ※ 男性のお客様 4000円 </p>
+                      <p class="menu-text_list">4500円 (税込)<br> ※ 男性のお客様 5000円 </p>
                     </li>
 
 
@@ -156,15 +162,23 @@
                 </div>
               </div>
               <div class="menu-content3">
-                <h3>アニバーサリーメニュー</h3>
+                <h3>アニバーサリープレート</h3>
                 <div class="menu-image">
-                  <%= image_tag  "/menu3.png"%>
+                  <%= image_tag  "/universary.png"%>
                 </div>
 
                 <div class="menu-text">
-                  <p>
-                    約40種類の紅茶などを飲み放題で楽しむことができます。食事の後にティータイムを存分に楽しむことができます。
-                  </p>
+                  <li class="menu-list">
+                    <h4>内容</h4>
+                    <p class="menu-text_list">
+                      アニバーサリープレートでは誕生日や記念日のためのプレートをご用意させていただきます。ご注文のお客様は予約ページの備考欄にプレートについて書いていただきます。料金についてはコース料金に加えて、1500円から相談できます。
+
+                    </p>
+                  </li>
+
+
+
+                  </ul>
                 </div>
               </div>
             </div>
@@ -179,7 +193,7 @@
               <h2>Q&nbsp;&&nbsp;A</h2>
 
               <div class="question-answer_lists">
-                <% @qas.first(10).each do |qa|%>
+                <% @qas.first(7).each do |qa|%>
                 <div class="question-answer_list">
                   <div class="question-answer">
                     <p><span class="big">【Q】</span>&nbsp;&nbsp;&nbsp;<%=qa.question%></p>
@@ -221,7 +235,7 @@
                   <li>【第11部】&nbsp;&nbsp;19:00 〜 22:00</li>
                   <li>【第12部】&nbsp;&nbsp;20:00 〜 23:00</li>
                 </ul>
-                <p class="annotion">※日によって一部変更しています。詳しくは予約ページで確認してください</p>
+                <p class="annotion">※日によって一部変更しています。詳しくは予約ページで確認してください。</p>
               </div>
 
             </div>

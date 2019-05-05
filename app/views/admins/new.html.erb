@@ -1,68 +1,61 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-  <%= stylesheet_link_tag "application" %>
- 
-
-</head>
-
-<body>
-  <div class="admin-new_reservation">
+<div class="admin-new_reservation">
   <h2>管理者予約画面</h2>
 
- <div class="new-reservation_form">
+  <div class="new-reservation_form">
     <%=form_for(@admin_reservation) do |f| %>
-      <div class="label">
+    <div class="label">
       <%= f.label :name, "名前" %>
     </div>
     <div>
       <%= f.text_field :name, {class: "reservation-form_content"} %>
     </div>
-  
-     <div class="label">
+
+    <div class="label">
       <%= f.label :phone, "電話番号" %>
     </div>
     <div>
       <%= f.text_field :phone, {class: "reservation-form_content"} %>
     </div>
-     <div class="label">
+    <div class="label">
       <%= f.label :email, "メールアドレス" %>
     </div>
     <div>
       <%= f.text_field :email, {class: "reservation-form_content"} %>
     </div>
-    
-  <div class="label">
+
+    <div class="label">
       <%= f.label :number, "予約人数" %>
-  
+
     </div>
     <div>
-    <% options =[1,2,3,4,5,6,7,8]%>
+      <% options =[2,3,4,5,6,7,8]%>
       <%= f.select :number, options %>
     </div>
+    <div class="reservation_element">
+      <div class="label">
+        <%= f.label :menu, "メニュー" %>
+
+      </div>
+      <div>
+        <% menus =["スタンダードコース","プレミアムコース"]%>
+        <%= f.select :menu, menus %>
+      </div>
 
 
-       <div class="label">
-      <%= f.label :remarks, "備考欄" %>
+      <div class="label">
+        <%= f.label :remarks, "備考欄" %>
+      </div>
+      <div>
+        <%= f.text_area :remarks, class: "reservation-form_content" %>
+      </div>
+
+      <%= f.hidden_field :schedule, value: @datetime %>
+
+
+      <div>
+        <%= f.submit "予約" %>
+      </div>
+      <% end %>
     </div>
-    <div>
-      <%= f.text_area :remarks, class: "reservation-form_content" %>
-    </div>
-
-    <%= f.hidden_field :schedule, value: @datetime %>
-
-
-    <div>
-      <%= f.submit "予約" %>
-    </div>
-  <% end %>
+  </div>
 </div>
-</div>
-</body>
-
-</html>

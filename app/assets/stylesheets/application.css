@@ -728,9 +728,12 @@ main .wrapper .menu-section .menu-content .menu-content3 .menu-image {
 }
 
 main .wrapper .menu-section .menu-content .menu-content1 .menu-text_list,
-main .wrapper .menu-section .menu-content .menu-content2 .menu-text_list,
-main .wrapper .menu-section .menu-content .menu-content3 .menu-text_list {
+main .wrapper .menu-section .menu-content .menu-content2 .menu-text_list {
     text-align: center;
+}
+
+main .wrapper .menu-section .menu-content .menu-content3 .menu-text_list {
+    text-align: left
 }
 
 main .wrapper .menu-section .menu-content .menu-content1 .menu-image img,
@@ -757,6 +760,7 @@ main .wrapper .menu-section .menu-content .menu-content1 p,
 main .wrapper .menu-section .menu-content .menu-content2 p,
 main .wrapper .menu-section .menu-content .menu-content3 p {
     padding: 0 15%;
+
 }
 
 main .wrapper .menu-section .menu-content h4 {
@@ -830,6 +834,7 @@ footer {
 footer .footer-wrapper {
     background-color: #f7fdfd;
     color: #a88d49;
+    padding-bottom: 60px;
 }
 
 footer .footer-wrapper .footer-content {
@@ -907,6 +912,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
         flex-basis: 40%;
         width: 200px;
         height: 300px;
+        margin-top: 150px;
     }
 }
 
@@ -915,6 +921,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
         flex-basis: 100%;
         width: 300px;
         height: 300px;
+        margin-top: 50px;
     }
 }
 
@@ -951,13 +958,18 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.reservation {
+    margin-bottom: 100px;
+}
+
 .reservation-flash {
     position: fixed;
     background-color: #a88d49;
     color: white;
     padding: 25px;
     text-align: center;
-    top: 0;
+    bottom: 0;
     z-index: 100;
     right: 0;
     left: 0;
@@ -1028,34 +1040,44 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 
 
 @media (min-width: 760px) {
-    .reservation .empty {
+    .empty {
         text-decoration: none;
         font-size: 30px;
         color: red;
     }
 
-    .reservation .occupied {
+}
+
+@media (min-width: 760px) {
+    .occupied {
         text-decoration: none;
         font-size: 30px;
         color: #cea540;
     }
+
+}
+
+
+
+
+@media (min-width: 0) and (max-width: 760px) {
+    .empty {
+        text-decoration: none;
+        font-size: 20px;
+        color: red;
+    }
+
 }
 
 @media (min-width: 0) and (max-width: 760px) {
-    .reservation .empty {
-        text-decoration: none;
-        font-size: 20px;
-        color: red;
-    }
 
-    .reservation .occupied {
+    .occupied {
         text-decoration: none;
         font-size: 20px;
         color: #cea540;
     }
 
 }
-
 
 .reservation .arrow-btn {
     text-decoration: none;
@@ -1106,21 +1128,10 @@ th {
 
 }
 
-
-
-
-.admin .empty {
-    text-decoration: none;
-    font-size: 30px;
-    color: red;
-}
-
-
 .admin .occupied {
     position: relative;
-    font-size: 30px;
-    color: #a88d49;
 }
+
 
 .admin .occupied-hover_action {
     position: absolute;
@@ -1135,6 +1146,7 @@ th {
     z-index: 1;
     border: 1px solid #cea540;
     border-radius: 5px;
+    margin-right: 100px;
 
 }
 
@@ -1173,6 +1185,7 @@ th {
 
 
 /* new-reservation */
+
 
 .new-reservation .new-reservation_header img {
     width: 160px;
@@ -1218,6 +1231,17 @@ th {
 
 .new-reservation .new-reservation_form .reservation_element {
     margin: 30px auto;
+}
+
+.new-reservation .new-reservation_form .reservation_element .remarks-explain {
+    width: 60%;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+.new-reservation .new-reservation_form .reservation_element .remarks-explain p {
+    text-align: left;
 }
 
 .new-reservation .new-reservation_form textarea {
@@ -1324,6 +1348,25 @@ button,
     /* border-bottom: solid 0.5px  #b4891b; */
     border-radius: 6px;
     border-width: 1px;
+}
+
+.nadmin-new_reservation .new-reservation_form textarea {
+    width: 200px;
+
+}
+
+@media (min-width: 760px) {
+    .admin-new_reservation .new-reservation_form textarea {
+        width: 40%;
+        height: 100px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+    .admin-new_reservation .new-reservation_form textarea {
+        width: 70%;
+        height: 80px;
+    }
 }
 
 .post h2 {
@@ -1435,6 +1478,8 @@ button,
 .admin-header .admin-header_content {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
 
 }
 
@@ -1490,6 +1535,34 @@ button,
     border: none;
     padding: 10px;
     margin: 20px auto;
+}
+
+@media (min-width: 760px) {
+
+    .admin td,
+    .admin th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 20px;
+        width: 8vw;
+        height: 4vw;
+        padding: 10px;
+
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+
+    .admin td,
+    .admin th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 10px;
+        width: 10vw;
+        height: 10vw;
+        padding: 2px;
+
+    }
 }
 
 
@@ -1565,7 +1638,7 @@ button,
 
 
 form.new_user {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 form.new_user .field {

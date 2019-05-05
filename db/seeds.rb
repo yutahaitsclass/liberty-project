@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.find_or_create_by(id: 1) do |user|
     
-  user.email = 'test@test.com'
-  user.password = 'test'
+  user.email = 'lafetedefilles.meguro@gmail.com'
+  user.password = '1313'
 end
