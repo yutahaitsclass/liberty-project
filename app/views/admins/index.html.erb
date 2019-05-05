@@ -48,7 +48,7 @@
       <td><%= "#{s.strftime("%H:%M")}~"%></td>
       <% 7.times do |i| %>
       <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
-      <%if (@firstday+i).wday==1%>
+      <%if (@firstday+i).wday==2%>
       <td>
         <div class="occupied">休</div>
       </td>
