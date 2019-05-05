@@ -30,6 +30,10 @@ address {
     -webkit-text-size-adjust: 100%;
     /* 2 */
     font-family: "Segoe UI Historic",
+        "ヒラギノ明朝 Pro W6",
+        "Hiragino Mincho Pro",
+        "HGS明朝E",
+        "ＭＳ Ｐ明朝",
         "HGP教科書体",
         serif;
     font-weight: normal;
