@@ -30,11 +30,11 @@ address {
     -webkit-text-size-adjust: 100%;
     /* 2 */
     font-family: "Segoe UI Historic",
-        "ヒラギノ明朝 Pro W6",
-        "Hiragino Mincho Pro",
-        "HGS明朝E",
-        "ＭＳ Ｐ明朝",
         "HGP教科書体",
+        "游教科書体",
+        "YuKyokasho",
+         "游教科書体 横用",
+         "YuKyokasho Yoko",
         serif;
     font-weight: normal;
     font-style: normal;
@@ -506,1150 +506,1164 @@ header .preserve {
     padding-top: 10px;
 }
 
-header .preserve input {
-    width: 110px;
-    height: 50px;
-    background-color: #cea540;
-    font-size: 16px;
-    color: white;
-    border: none;
-}
-
-main {
-    box-sizing: border-box;
-}
-
-main .top-image {
-    position: fixed;
-    z-index: 0;
-}
-
-main .top-image img {
-    height: 400px;
-    width: 100vw;
-    object-fit: cover;
-}
-
-main .wrapper {
-    color: #a88d49;
-    z-index: 1;
-    position: relative;
-    padding-top: 400px;
-}
-
-main .wrapper .news-section {
-    background-color: #f7fdfd;
-    padding-bottom: 30px;
-    padding-top: 40px;
-}
-
 @media (min-width: 760px) {
-    main .wrapper .news-section .news-content {
-        padding: 50px 30%;
+    header .preserve input {
+        width: 110px;
+        height: 50px;
+        background-color: #cea540;
+        font-size: 16px;
+        color: white;
+        border: none;
     }
 }
 
 @media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .news-section .news-content {
-        padding: 30px 10%;
+    header .preserve input {
+        width: 90px;
+        height: 40px;
+        background-color: #cea540;
+        font-size: 16px;
+        color: white;
+        border: none;
     }
-}
-
-main .wrapper .news-section .news-content .news-content_part {
-    margin: 20px auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: aliceblue;
-    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
-}
-
-main .wrapper .news-section .news-content .news-content_part .news-content_text {
-    text-align: center;
-    flex-basis: 100%;
-
-
-}
-
-main .wrapper .news-section .news-content .news-content_part .news-content_title {
-    text-align: center;
-    flex-basis: 100%;
-    font-size: 20px;
-
-}
 
 
 
-main .wrapper .news-section h2,
-main .wrapper .news-section .subtitle {
-    text-align: center;
-}
+    main {
+        box-sizing: border-box;
+    }
 
-main .wrapper .news-section .news-content_image {
-    position: relative;
-}
+    main .top-image {
+        position: fixed;
+        z-index: 0;
+    }
 
-main .wrapper .news-section .news-content_image .crape1 {
-    position: absolute;
-}
+    main .top-image img {
+        height: 400px;
+        width: 100vw;
+        object-fit: cover;
+    }
 
-@media (min-width: 760px) {
+    main .wrapper {
+        color: #a88d49;
+        z-index: 1;
+        position: relative;
+        padding-top: 400px;
+    }
+
+    main .wrapper .news-section {
+        background-color: #f7fdfd;
+        padding-bottom: 30px;
+        padding-top: 40px;
+    }
+
+    @media (min-width: 760px) {
+        main .wrapper .news-section .news-content {
+            padding: 50px 30%;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        main .wrapper .news-section .news-content {
+            padding: 30px 10%;
+        }
+    }
+
+    main .wrapper .news-section .news-content .news-content_part {
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+        box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+    }
+
+    main .wrapper .news-section .news-content .news-content_part .news-content_text {
+        text-align: center;
+        flex-basis: 100%;
+
+
+    }
+
+    main .wrapper .news-section .news-content .news-content_part .news-content_title {
+        text-align: center;
+        flex-basis: 100%;
+        font-size: 20px;
+
+    }
+
+
+
+    main .wrapper .news-section h2,
+    main .wrapper .news-section .subtitle {
+        text-align: center;
+    }
+
+    main .wrapper .news-section .news-content_image {
+        position: relative;
+    }
+
     main .wrapper .news-section .news-content_image .crape1 {
-        width: 210px;
-        left: -10px;
-        top: -140px;
+        position: absolute;
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .news-section .news-content_image .crape1 {
-        width: 100px;
-        left: -5px;
-        top: -40px;
+    @media (min-width: 760px) {
+        main .wrapper .news-section .news-content_image .crape1 {
+            width: 210px;
+            left: -10px;
+            top: -140px;
+        }
     }
-}
 
-main .wrapper .store-section {
-    padding-bottom: 30px;
-    padding-top: 40px;
-    background-color: white;
-}
+    @media (min-width: 0) and (max-width: 760px) {
+        main .wrapper .news-section .news-content_image .crape1 {
+            width: 100px;
+            left: -5px;
+            top: -40px;
+        }
+    }
 
-main .wrapper .store-section .store-content .store-content_text {
-    margin: 40px auto;
-    padding: 20px 30px;
-    /* background-color: #f7fdfd; */
-    letter-spacing: 1px;
-    line-height: 2em;
-    box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
-}
+    main .wrapper .store-section {
+        padding-bottom: 30px;
+        padding-top: 40px;
+        background-color: white;
+    }
 
-@media (min-width: 760px) {
     main .wrapper .store-section .store-content .store-content_text {
-        width: 40%;
+        margin: 40px auto;
+        padding: 20px 30px;
+        /* background-color: #f7fdfd; */
+        letter-spacing: 1px;
+        line-height: 2em;
+        box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .store-section .store-content .store-content_text {
-        width: 80%;
+    @media (min-width: 760px) {
+        main .wrapper .store-section .store-content .store-content_text {
+            width: 40%;
+        }
     }
-}
 
-main .wrapper .store-section .store-content .store-content_text p {
-    text-align: left;
-}
+    @media (min-width: 0) and (max-width: 760px) {
+        main .wrapper .store-section .store-content .store-content_text {
+            width: 80%;
+        }
+    }
 
-main .wrapper .store-section h2,
-main .wrapper .store-section .subtitle {
-    text-align: center;
-}
+    main .wrapper .store-section .store-content .store-content_text p {
+        text-align: left;
+    }
 
-main .wrapper .store-section .store-content_image {
-    position: relative;
-}
+    main .wrapper .store-section h2,
+    main .wrapper .store-section .subtitle {
+        text-align: center;
+    }
 
-main .wrapper .store-section .store-content_image .crape2 {
-    position: absolute;
-    right: 0;
-}
+    main .wrapper .store-section .store-content_image {
+        position: relative;
+    }
 
-@media (min-width: 760px) {
     main .wrapper .store-section .store-content_image .crape2 {
-        width: 180px;
-        bottom: -150px;
-        right: 0px;
+        position: absolute;
+        right: 0;
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .store-section .store-content_image .crape2 {
-        width: 100px;
-        bottom: -120px;
+    @media (min-width: 760px) {
+        main .wrapper .store-section .store-content_image .crape2 {
+            width: 180px;
+            bottom: -150px;
+            right: 0px;
+        }
     }
-}
 
-main .wrapper .menu-section {
-    background-color: rgba(247, 253, 253, 0.9);
-    padding-top: 40px;
-}
+    @media (min-width: 0) and (max-width: 760px) {
+        main .wrapper .store-section .store-content_image .crape2 {
+            width: 100px;
+            bottom: -120px;
+        }
+    }
 
-main .wrapper .menu-section h2,
-main .wrapper .menu-section h3,
-main .wrapper .menu-section .subtitle {
-    text-align: center;
-}
+    main .wrapper .menu-section {
+        background-color: rgba(247, 253, 253, 0.9);
+        padding-top: 40px;
+    }
 
-main .wrapper .menu-section h3 {
-    font-size: 25px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
+    main .wrapper .menu-section h2,
+    main .wrapper .menu-section h3,
+    main .wrapper .menu-section .subtitle {
+        text-align: center;
+    }
 
-main .wrapper .menu-section .menu-content {
-    padding: 30px 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    main .wrapper .menu-section h3 {
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
 
-@media (min-width: 760px) {
+    main .wrapper .menu-section .menu-content {
+        padding: 30px 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @media (min-width: 760px) {
+
+        main .wrapper .menu-section .menu-content .menu-content1,
+        main .wrapper .menu-section .menu-content .menu-content2,
+        main .wrapper .menu-section .menu-content .menu-content3 {
+            flex-basis: 30%;
+        }
+
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+
+        main .wrapper .menu-section .menu-content .menu-content1,
+        main .wrapper .menu-section .menu-content .menu-content2,
+        main .wrapper .menu-section .menu-content .menu-content3 {
+            flex-basis: 100%;
+        }
+
+    }
 
     main .wrapper .menu-section .menu-content .menu-content1,
     main .wrapper .menu-section .menu-content .menu-content2,
     main .wrapper .menu-section .menu-content .menu-content3 {
+        /* padding: 10px 5%; */
+        background-color: rgb(250, 248, 250);
+        box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    main .wrapper .menu-section .menu-content .menu-content1 .menu-image,
+    main .wrapper .menu-section .menu-content .menu-content2 .menu-image,
+    main .wrapper .menu-section .menu-content .menu-content3 .menu-image {
+        margin: 30px auto;
+        text-align: center;
+
+    }
+
+    main .wrapper .menu-section .menu-content .menu-content1 .menu-text_list,
+    main .wrapper .menu-section .menu-content .menu-content2 .menu-text_list {
+        text-align: center;
+    }
+
+    main .wrapper .menu-section .menu-content .menu-content3 .menu-text_list {
+        text-align: left
+    }
+
+    main .wrapper .menu-section .menu-content .menu-content1 .menu-image img,
+    main .wrapper .menu-section .menu-content .menu-content2 .menu-image img,
+    main .wrapper .menu-section .menu-content .menu-content3 .menu-image img {
+        margin: 0 auto;
+        width: 220px;
+
+    }
+
+    main .wrapper .menu-section .menu-content .menu-content1 .menu-list,
+    main .wrapper .menu-section .menu-content .menu-content2 .menu-list,
+    main .wrapper .menu-section .menu-content .menu-content3 .menu-list {
+        background-color: rgb(250, 248, 250);
+        box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
+        padding: 10px;
+        width: 90%;
+        padding: 20px 10px;
+        margin: 20px auto;
+    }
+
+
+    main .wrapper .menu-section .menu-content .menu-content1 p,
+    main .wrapper .menu-section .menu-content .menu-content2 p,
+    main .wrapper .menu-section .menu-content .menu-content3 p {
+        padding: 0 15%;
+
+    }
+
+    main .wrapper .menu-section .menu-content h4 {
+        font-size: 20px;
+        margin: 10px auto;
+    }
+
+    main .wrapper .question-answer_section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: white;
+    }
+
+    main .wrapper .question-answer_section h2 {
+        text-align: center;
+    }
+
+
+
+
+    @media (min-width: 760px) {
+        main .wrapper .question-answer_section .question-answer_content {
+            padding: 10px 30%;
+
+
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        main .wrapper .question-answer_section .question-answer_content {
+            padding: 10px 5%;
+        }
+    }
+
+    main .wrapper .question-answer_section .question-answer_content .question-answer_list {
+        background-color: aliceblue;
+        box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+        padding: 10px 20px;
+        margin: 20px auto;
+    }
+
+    main .wrapper .question-answer_section .question-answer_content .question-answer_list p {
+        text-align: left;
+        margin: 20px auto;
+    }
+
+    .admin-header_section h2 {
+        letter-spacing: 5px;
+
+    }
+
+
+
+
+    main .wrapper .instagram-bt input {
+        /* width: 110px; */
+        height: 50px;
+        background-color: #cea540;
+        font-size: 16px;
+        color: white;
+        border: none;
+        text-align: center;
+    }
+
+    footer {
+        box-sizing: border-box;
+        z-index: 1;
+        position: relative;
+    }
+
+    footer .footer-wrapper {
+        background-color: #f7fdfd;
+        color: #a88d49;
+        padding-bottom: 60px;
+    }
+
+    footer .footer-wrapper .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic {
+        padding: 30px 10%;
+        text-align: center;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic ul {
+        list-style: none;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic h2 {
+        font-size: 19px;
+        margin: 10px auto;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic address {
+        margin: 10px auto;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time {
+        margin: 10px auto;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time ul {
+        margin-bottom: 20px;
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time .annotion {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    @media (min-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_basic {
+            flex-basis: 50%;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_basic {
+            flex-basis: 100%;
+        }
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_map {
+        overflow: visible;
+    }
+
+    @media (min-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_map {
+            margin: 30px auto;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_map {
+            margin: 10px auto;
+        }
+    }
+
+    footer .footer-wrapper .footer-content .footer-content_map iframe {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media (min-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_map {
+            flex-basis: 40%;
+            width: 200px;
+            height: 300px;
+            margin-top: 150px;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        footer .footer-wrapper .footer-content .footer-content_map {
+            flex-basis: 100%;
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+        }
+    }
+
+    /* load.css */
+
+    #loader-bg {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background: white;
+        z-index: 3;
+    }
+
+    #loader-bg img {
+        width: 180px;
+        height: auto;
+    }
+
+    #loader {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+    }
+
+    /*# sourceMappingURL=style.css.map */
+
+    .reservation {
+        margin-bottom: 100px;
+    }
+
+    .reservation-flash {
+        position: fixed;
+        background-color: #a88d49;
+        color: white;
+        padding: 25px;
+        text-align: center;
+        bottom: 0;
+        z-index: 100;
+        right: 0;
+        left: 0;
+    }
+
+    .reservation table {
+        margin: 30px auto;
+        text-align: center;
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+
+    }
+
+    .reservation .reservation-week_links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .reservation .reservation-week_links a {
+        color: #a88d49;
+    }
+
+    .reservation .reservation-before_link {
+        flex-basis: 30%;
+
+
+    }
+
+    .reservation .reservation-after_link {
+        flex-basis: 30%;
+
+    }
+
+    @media (min-width: 760px) {
+
+        .reservation td,
+        .reservation th {
+            border: solid 1px #cea540;
+            border-collapse: collapse;
+            font-size: 20px;
+            width: 8vw;
+            height: 4vw;
+            padding: 10px;
+
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+
+        .reservation td,
+        .reservation th {
+            border: solid 1px #cea540;
+            border-collapse: collapse;
+            font-size: 10px;
+            width: 10vw;
+            height: 10vw;
+            padding: 2px;
+
+        }
+    }
+
+
+    .reservation img {
+        width: 160px;
+        margin-bottom: 20px;
+    }
+
+
+
+    @media (min-width: 760px) {
+        .empty {
+            text-decoration: none;
+            font-size: 30px;
+            color: red;
+        }
+
+    }
+
+    @media (min-width: 760px) {
+        .occupied {
+            text-decoration: none;
+            font-size: 30px;
+            color: #cea540;
+        }
+
+    }
+
+
+
+
+    @media (min-width: 0) and (max-width: 760px) {
+        .empty {
+            text-decoration: none;
+            font-size: 20px;
+            color: red;
+        }
+
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+
+        .occupied {
+            text-decoration: none;
+            font-size: 20px;
+            color: #cea540;
+        }
+
+    }
+
+    .reservation .arrow-btn {
+        text-decoration: none;
+        font-size: 16px;
+        color: #cea540;
+    }
+
+
+
+
+    /* admin */
+
+    .admin {
+        margin-top: 50px;
+        margin-bottom: 300px;
+    }
+
+    .admin table {
+        margin: 30px auto;
+        text-align: center;
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+
+    }
+
+    .admin .admin-week_links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .admin .admin-before_link {
+        flex-basis: 30%;
+
+    }
+
+    .admin .admin-after_link {
         flex-basis: 30%;
     }
 
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-
-    main .wrapper .menu-section .menu-content .menu-content1,
-    main .wrapper .menu-section .menu-content .menu-content2,
-    main .wrapper .menu-section .menu-content .menu-content3 {
-        flex-basis: 100%;
-    }
-
-}
-
-main .wrapper .menu-section .menu-content .menu-content1,
-main .wrapper .menu-section .menu-content .menu-content2,
-main .wrapper .menu-section .menu-content .menu-content3 {
-    /* padding: 10px 5%; */
-    background-color: rgb(250, 248, 250);
-    box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
-main .wrapper .menu-section .menu-content .menu-content1 .menu-image,
-main .wrapper .menu-section .menu-content .menu-content2 .menu-image,
-main .wrapper .menu-section .menu-content .menu-content3 .menu-image {
-    margin: 30px auto;
-    text-align: center;
-
-}
-
-main .wrapper .menu-section .menu-content .menu-content1 .menu-text_list,
-main .wrapper .menu-section .menu-content .menu-content2 .menu-text_list {
-    text-align: center;
-}
-
-main .wrapper .menu-section .menu-content .menu-content3 .menu-text_list {
-    text-align: left
-}
-
-main .wrapper .menu-section .menu-content .menu-content1 .menu-image img,
-main .wrapper .menu-section .menu-content .menu-content2 .menu-image img,
-main .wrapper .menu-section .menu-content .menu-content3 .menu-image img {
-    margin: 0 auto;
-    width: 220px;
-
-}
-
-main .wrapper .menu-section .menu-content .menu-content1 .menu-list,
-main .wrapper .menu-section .menu-content .menu-content2 .menu-list,
-main .wrapper .menu-section .menu-content .menu-content3 .menu-list {
-    background-color: rgb(250, 248, 250);
-    box-shadow: 0 0 15px rgba(119, 96, 96, 0.3);
-    padding: 10px;
-    width: 90%;
-    padding: 20px 10px;
-    margin: 20px auto;
-}
-
-
-main .wrapper .menu-section .menu-content .menu-content1 p,
-main .wrapper .menu-section .menu-content .menu-content2 p,
-main .wrapper .menu-section .menu-content .menu-content3 p {
-    padding: 0 15%;
-
-}
-
-main .wrapper .menu-section .menu-content h4 {
-    font-size: 20px;
-    margin: 10px auto;
-}
-
-main .wrapper .question-answer_section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: white;
-}
-
-main .wrapper .question-answer_section h2 {
-    text-align: center;
-}
-
-
-
-
-@media (min-width: 760px) {
-    main .wrapper .question-answer_section .question-answer_content {
-        padding: 10px 30%;
-
+    .admin td,
+    th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 22px;
+        width: 8vw;
+        height: 4vw;
+        padding: 10px;
 
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    main .wrapper .question-answer_section .question-answer_content {
-        padding: 10px 5%;
+    .admin .occupied {
+        position: relative;
     }
-}
-
-main .wrapper .question-answer_section .question-answer_content .question-answer_list {
-    background-color: aliceblue;
-    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
-    padding: 10px 20px;
-    margin: 20px auto;
-}
-
-main .wrapper .question-answer_section .question-answer_content .question-answer_list p {
-    text-align: left;
-    margin: 20px auto;
-}
-
-.admin-header_section h2 {
-    letter-spacing: 5px;
-
-}
 
 
+    .admin .occupied-hover_action {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+        background-color: white;
+        padding: 20px 30px;
+        font-size: 16px;
+        padding: 10px;
+        min-width: 200px;
+        z-index: 1;
+        border: 1px solid #cea540;
+        border-radius: 5px;
+        margin-right: 100px;
 
-
-main .wrapper .instagram-bt input {
-    /* width: 110px; */
-    height: 50px;
-    background-color: #cea540;
-    font-size: 16px;
-    color: white;
-    border: none;
-    text-align: center;
-}
-
-footer {
-    box-sizing: border-box;
-    z-index: 1;
-    position: relative;
-}
-
-footer .footer-wrapper {
-    background-color: #f7fdfd;
-    color: #a88d49;
-    padding-bottom: 60px;
-}
-
-footer .footer-wrapper .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic {
-    padding: 30px 10%;
-    text-align: center;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic ul {
-    list-style: none;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic h2 {
-    font-size: 19px;
-    margin: 10px auto;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic address {
-    margin: 10px auto;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time {
-    margin: 10px auto;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time ul {
-    margin-bottom: 20px;
-}
-
-footer .footer-wrapper .footer-content .footer-content_basic .content-basic_time .annotion {
-    font-size: 12px;
-    text-align: center;
-}
-
-@media (min-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_basic {
-        flex-basis: 50%;
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_basic {
-        flex-basis: 100%;
+    .admin .occupied-hover_action ul {
+        list-style: none;
     }
-}
 
-footer .footer-wrapper .footer-content .footer-content_map {
-    overflow: visible;
-}
-
-@media (min-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_map {
-        margin: 30px auto;
-    }
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_map {
+    .admin .occupied-hover_action ul li {
         margin: 10px auto;
     }
-}
 
-footer .footer-wrapper .footer-content .footer-content_map iframe {
-    width: 300px;
-    height: 300px;
-}
+    .admin .occupied-hover_action a {
+        text-decoration: none;
+        background-color: #a88d49;
+        padding: 5px 10px;
+        color: white;
 
-@media (min-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_map {
-        flex-basis: 40%;
+    }
+
+    .admin .occupied:hover .occupied-hover_action {
+        display: block;
+
+    }
+
+    .admin .occupied-hover_action:hover {
+        display: block;
+    }
+
+    .admin .arrow-btn {
+        text-decoration: none;
+        font-size: 16px;
+        color: #a88d49;
+    }
+
+
+
+
+    /* new-reservation */
+
+
+    .new-reservation .new-reservation_header img {
+        width: 160px;
+    }
+
+    .new-reservation .new-reservation_header h2 {
+        margin: 10px auto;
+    }
+
+    .new-reservation .new-reservation_form {
+        margin-top: 30px;
+    }
+
+    .new-reservation .new-reservation_form .reservation-form_content {
+        margin: 10px auto 30px;
+        padding: 5px;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .new-reservation .new-reservation_form #reservation_number {
+        padding: 5px;
+        margin-top: 30px;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .new-reservation .new-reservation_form #reservation_menu {
+        padding: 5px;
+        margin-top: 30px;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .new-reservation .new-reservation_form .reservation_element {
+        margin: 30px auto;
+    }
+
+    .new-reservation .new-reservation_form .reservation_element .remarks-explain {
+        width: 60%;
+        padding: 10px;
+        font-size: 15px;
+
+    }
+
+    .new-reservation .new-reservation_form .reservation_element .remarks-explain p {
+        text-align: left;
+    }
+
+    .new-reservation .new-reservation_form textarea {
         width: 200px;
-        height: 300px;
-        margin-top: 150px;
+
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-    footer .footer-wrapper .footer-content .footer-content_map {
-        flex-basis: 100%;
-        width: 300px;
-        height: 300px;
-        margin-top: 50px;
+    @media (min-width: 760px) {
+        .new-reservation .new-reservation_form textarea {
+            width: 40%;
+            height: 100px;
+        }
     }
-}
 
-/* load.css */
+    @media (min-width: 0) and (max-width: 760px) {
+        .new-reservation .new-reservation_form textarea {
+            width: 70%;
+            height: 80px;
+        }
+    }
 
-#loader-bg {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    background: white;
-    z-index: 3;
-}
+    @media (min-width: 760px) {
+        .new-reservation .new-reservation_form .cancel-policy {
+            width: 50%;
+        }
+    }
 
-#loader-bg img {
-    width: 180px;
-    height: auto;
-}
+    @media (min-width: 0) and (max-width: 760px) {
+        .new-reservation .new-reservation_form .cancel-policy {
+            width: 80%;
+        }
+    }
 
-#loader {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-}
-
-/*# sourceMappingURL=style.css.map */
-
-.reservation {
-    margin-bottom: 100px;
-}
-
-.reservation-flash {
-    position: fixed;
-    background-color: #a88d49;
-    color: white;
-    padding: 25px;
-    text-align: center;
-    bottom: 0;
-    z-index: 100;
-    right: 0;
-    left: 0;
-}
-
-.reservation table {
-    margin: 30px auto;
-    text-align: center;
-    border: solid 1px #cea540;
-    border-collapse: collapse;
-
-}
-
-.reservation .reservation-week_links {
-    display: flex;
-    justify-content: space-around;
-}
-
-.reservation .reservation-week_links a {
-    color: #a88d49;
-}
-
-.reservation .reservation-before_link {
-    flex-basis: 30%;
-
-
-}
-
-.reservation .reservation-after_link {
-    flex-basis: 30%;
-
-}
-
-@media (min-width: 760px) {
-
-    .reservation td,
-    .reservation th {
-        border: solid 1px #cea540;
-        border-collapse: collapse;
+    .new-reservation .new-reservation_form .cancel-policy h5 {
         font-size: 20px;
-        width: 8vw;
-        height: 4vw;
-        padding: 10px;
+        margin: 10px auto;
 
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
-
-    .reservation td,
-    .reservation th {
-        border: solid 1px #cea540;
-        border-collapse: collapse;
-        font-size: 10px;
-        width: 10vw;
-        height: 10vw;
-        padding: 2px;
-
-    }
-}
-
-
-.reservation img {
-    width: 160px;
-    margin-bottom: 20px;
-}
-
-
-
-@media (min-width: 760px) {
-    .empty {
-        text-decoration: none;
-        font-size: 30px;
-        color: red;
-    }
-
-}
-
-@media (min-width: 760px) {
-    .occupied {
-        text-decoration: none;
-        font-size: 30px;
-        color: #cea540;
-    }
-
-}
-
-
-
-
-@media (min-width: 0) and (max-width: 760px) {
-    .empty {
-        text-decoration: none;
-        font-size: 20px;
-        color: red;
-    }
-
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-
-    .occupied {
-        text-decoration: none;
-        font-size: 20px;
-        color: #cea540;
-    }
-
-}
-
-.reservation .arrow-btn {
-    text-decoration: none;
-    font-size: 16px;
-    color: #cea540;
-}
-
-
-
-
-/* admin */
-
-.admin {
-    margin-top: 50px;
-    margin-bottom: 300px;
-}
-
-.admin table {
-    margin: 30px auto;
-    text-align: center;
-    border: solid 1px #cea540;
-    border-collapse: collapse;
-
-}
-
-.admin .admin-week_links {
-    display: flex;
-    justify-content: space-around;
-}
-
-.admin .admin-before_link {
-    flex-basis: 30%;
-
-}
-
-.admin .admin-after_link {
-    flex-basis: 30%;
-}
-
-.admin td,
-th {
-    border: solid 1px #cea540;
-    border-collapse: collapse;
-    font-size: 22px;
-    width: 8vw;
-    height: 4vw;
-    padding: 10px;
-
-}
-
-.admin .occupied {
-    position: relative;
-}
-
-
-.admin .occupied-hover_action {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    display: none;
-    background-color: white;
-    padding: 20px 30px;
-    font-size: 16px;
-    padding: 10px;
-    min-width: 200px;
-    z-index: 1;
-    border: 1px solid #cea540;
-    border-radius: 5px;
-    margin-right: 100px;
-
-}
-
-.admin .occupied-hover_action ul {
-    list-style: none;
-}
-
-.admin .occupied-hover_action ul li {
-    margin: 10px auto;
-}
-
-.admin .occupied-hover_action a {
-    text-decoration: none;
-    background-color: #a88d49;
-    padding: 5px 10px;
-    color: white;
-
-}
-
-.admin .occupied:hover .occupied-hover_action {
-    display: block;
-
-}
-
-.admin .occupied-hover_action:hover {
-    display: block;
-}
-
-.admin .arrow-btn {
-    text-decoration: none;
-    font-size: 16px;
-    color: #a88d49;
-}
-
-
-
-
-/* new-reservation */
-
-
-.new-reservation .new-reservation_header img {
-    width: 160px;
-}
-
-.new-reservation .new-reservation_header h2 {
-    margin: 10px auto;
-}
-
-.new-reservation .new-reservation_form {
-    margin-top: 30px;
-}
-
-.new-reservation .new-reservation_form .reservation-form_content {
-    margin: 10px auto 30px;
-    padding: 5px;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.new-reservation .new-reservation_form #reservation_number {
-    padding: 5px;
-    margin-top: 30px;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.new-reservation .new-reservation_form #reservation_menu {
-    padding: 5px;
-    margin-top: 30px;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.new-reservation .new-reservation_form .reservation_element {
-    margin: 30px auto;
-}
-
-.new-reservation .new-reservation_form .reservation_element .remarks-explain {
-    width: 60%;
-    padding: 10px;
-    font-size: 15px;
-
-}
-
-.new-reservation .new-reservation_form .reservation_element .remarks-explain p {
-    text-align: left;
-}
-
-.new-reservation .new-reservation_form textarea {
-    width: 200px;
-
-}
-
-@media (min-width: 760px) {
-    .new-reservation .new-reservation_form textarea {
-        width: 40%;
-        height: 100px;
-    }
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    .new-reservation .new-reservation_form textarea {
-        width: 70%;
-        height: 80px;
-    }
-}
-
-@media (min-width: 760px) {
     .new-reservation .new-reservation_form .cancel-policy {
+
+
+        line-height: 1.8em;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+        padding: 30px;
+    }
+
+    .new-reservation .new-reservation_form .cancel-policy .cancel-policy_list {
+        margin: 20px auto;
+
+        font-weight: bold;
+    }
+
+    .new-reservation .new-reservation_form .cancel-policy p {
+        text-align: left;
+    }
+
+    button,
+    [type="submit"] {
+        margin-bottom: 30px;
+        border-style: none;
+        color: white;
+        padding: 10px 15px;
+        background-color: #cea540;
+    }
+
+
+    /* admin-new_reservation */
+
+    .admin-new_reservation h2 {
+        margin: 30px auto;
+    }
+
+    .admin-new_reservation .new-reservation_form {
+        margin-top: 30px;
+    }
+
+    .admin-new_reservation .new-reservation_form .reservation-form_content {
+        margin: 10px auto 30px;
+        padding: 5px;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .admin-new_reservation .new-reservation_form #reservation_number {
+        padding: 5px;
+        margin: 20px auto;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .admin-new_reservation .new-reservation_form #reservation_menu {
+        padding: 5px;
+        margin: 20px auto;
+        /* color: #cea540; */
+        border-style: ridge;
+        /* border-bottom: solid 0.5px  #b4891b; */
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .nadmin-new_reservation .new-reservation_form textarea {
+        width: 200px;
+
+    }
+
+    @media (min-width: 760px) {
+        .admin-new_reservation .new-reservation_form textarea {
+            width: 40%;
+            height: 100px;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        .admin-new_reservation .new-reservation_form textarea {
+            width: 70%;
+            height: 80px;
+        }
+    }
+
+    .post h2 {
+        padding: 30px;
+    }
+
+    .post .post-form .post-form_date {
+        padding: 30px;
+    }
+
+    .post .post-form .post-form_title {
+        padding: 30px;
+    }
+
+    .post .post-form .post-form_content {
+        padding: 30px;
+    }
+
+    .post .post-form textarea {
+
+        width: 50vw;
+        height: 100px;
+
+    }
+
+    .post .post-form input[type="submit"] {
+        margin-top: 30px;
+    }
+
+
+    .post-list .post-content {
         width: 50%;
-    }
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    .new-reservation .new-reservation_form .cancel-policy {
-        width: 80%;
-    }
-}
-
-.new-reservation .new-reservation_form .cancel-policy h5 {
-    font-size: 20px;
-    margin: 10px auto;
-
-}
-
-.new-reservation .new-reservation_form .cancel-policy {
-
-
-    line-height: 1.8em;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
-    padding: 30px;
-}
-
-.new-reservation .new-reservation_form .cancel-policy .cancel-policy_list {
-    margin: 20px auto;
-
-    font-weight: bold;
-}
-
-.new-reservation .new-reservation_form .cancel-policy p {
-    text-align: left;
-}
-
-button,
-[type="submit"] {
-    margin-bottom: 30px;
-    border-style: none;
-    color: white;
-    padding: 10px 15px;
-    background-color: #cea540;
-}
-
-
-/* admin-new_reservation */
-
-.admin-new_reservation h2 {
-    margin: 30px auto;
-}
-
-.admin-new_reservation .new-reservation_form {
-    margin-top: 30px;
-}
-
-.admin-new_reservation .new-reservation_form .reservation-form_content {
-    margin: 10px auto 30px;
-    padding: 5px;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.admin-new_reservation .new-reservation_form #reservation_number {
-    padding: 5px;
-    margin: 20px auto;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.admin-new_reservation .new-reservation_form #reservation_menu {
-    padding: 5px;
-    margin: 20px auto;
-    /* color: #cea540; */
-    border-style: ridge;
-    /* border-bottom: solid 0.5px  #b4891b; */
-    border-radius: 6px;
-    border-width: 1px;
-}
-
-.nadmin-new_reservation .new-reservation_form textarea {
-    width: 200px;
-
-}
-
-@media (min-width: 760px) {
-    .admin-new_reservation .new-reservation_form textarea {
-        width: 40%;
-        height: 100px;
-    }
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    .admin-new_reservation .new-reservation_form textarea {
-        width: 70%;
-        height: 80px;
-    }
-}
-
-.post h2 {
-    padding: 30px;
-}
-
-.post .post-form .post-form_date {
-    padding: 30px;
-}
-
-.post .post-form .post-form_title {
-    padding: 30px;
-}
-
-.post .post-form .post-form_content {
-    padding: 30px;
-}
-
-.post .post-form textarea {
-
-    width: 50vw;
-    height: 100px;
-
-}
-
-.post .post-form input[type="submit"] {
-    margin-top: 30px;
-}
-
-
-.post-list .post-content {
-    width: 50%;
-    text-align: center;
-    background-color: aliceblue;
-    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
-    padding: 30px;
-    margin: 20px auto;
-}
-
-.post-list .post-content .post-content_text,
-.post-list .post-content .post-content_date,
-.post-list .post-content .post-content_title,
-.post-list .post-content .post-content-delete {
-    margin: 10px auto;
-}
-
-.post-list .post-content .post-content_delete {
-    margin: 15px auto;
-}
-
-.post-list .post-content .post-content_delete .post-delete_btn {
-    text-decoration: none;
-    color: white;
-    padding: 5px 15px;
-    background-color: #cea540;
-
-}
-
-.new-post_link {
-    margin: 30px auto;
-}
-
-.new-post_link a {
-    text-decoration: none;
-    height: 50px;
-    background-color: #cea540;
-    font-size: 16px;
-    color: white;
-    border: none;
-    padding: 10px;
-
-}
-
-
-@media (min-width: 760px) {
-    .question-answer .question-answer_content {
-        padding: 40px 20%;
-    }
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    .question-answer .question-answer_content {
-        padding: 40px 5%;
-    }
-}
-
-.question-answer .question-answer_list {
-    background-color: aliceblue;
-    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
-    padding: 30px 5%;
-    margin: 20px auto;
-}
-
-.question-answer .question-answer_lists .question-answer_list .question-answer_element {
-    margin: 20px auto;
-}
-
-
-
-
-.question-answer .question-answer_list .qa-delete_btn {
-    text-decoration: none;
-    color: white;
-    padding: 5px 15px;
-    background-color: #cea540;
-}
-
-
-.admin-header .admin-header_content {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-
-}
-
-
-@media (min-width: 760px) {
-    .admin-header .admin-header_content .admin-header_element {
-        flex-basis: 25%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: #a88d49;
+        text-align: center;
+        background-color: aliceblue;
+        box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+        padding: 30px;
+        margin: 20px auto;
     }
 
-}
-
-@media (min-width: 0) and (max-width: 760px) {
-    .admin-header .admin-header_content .admin-header_element {
-        flex-basis: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: #a88d49;
+    .post-list .post-content .post-content_text,
+    .post-list .post-content .post-content_date,
+    .post-list .post-content .post-content_title,
+    .post-list .post-content .post-content-delete {
+        margin: 10px auto;
     }
 
-}
+    .post-list .post-content .post-content_delete {
+        margin: 15px auto;
+    }
 
-.admin-header .admin-header_content .admin-header_element:hover {
-    background-color: #cea540;
-}
+    .post-list .post-content .post-content_delete .post-delete_btn {
+        text-decoration: none;
+        color: white;
+        padding: 5px 15px;
+        background-color: #cea540;
 
-.admin-header .admin-header_content .admin-header_element a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 50px;
-}
+    }
 
-.admin-header_section {
-    margin: 20px auto;
-}
+    .new-post_link {
+        margin: 30px auto;
+    }
 
-.admin-header_section h2 {
-    margin: 20px auto;
-}
-
-.admin-header_section .admin-header_btn {
-    margin: 30px auto;
-}
-
-.admin-header_section .admin-header_btn a {
-    text-decoration: none;
-    height: 50px;
-    background-color: #cea540;
-    font-size: 16px;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 20px auto;
-}
-
-@media (min-width: 760px) {
-
-    .admin td,
-    .admin th {
-        border: solid 1px #cea540;
-        border-collapse: collapse;
-        font-size: 20px;
-        width: 8vw;
-        height: 4vw;
+    .new-post_link a {
+        text-decoration: none;
+        height: 50px;
+        background-color: #cea540;
+        font-size: 16px;
+        color: white;
+        border: none;
         padding: 10px;
 
     }
-}
 
-@media (min-width: 0) and (max-width: 760px) {
 
-    .admin td,
-    .admin th {
-        border: solid 1px #cea540;
-        border-collapse: collapse;
-        font-size: 10px;
-        width: 10vw;
-        height: 10vw;
-        padding: 2px;
+    @media (min-width: 760px) {
+        .question-answer .question-answer_content {
+            padding: 40px 20%;
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+        .question-answer .question-answer_content {
+            padding: 40px 5%;
+        }
+    }
+
+    .question-answer .question-answer_list {
+        background-color: aliceblue;
+        box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+        padding: 30px 5%;
+        margin: 20px auto;
+    }
+
+    .question-answer .question-answer_lists .question-answer_list .question-answer_element {
+        margin: 20px auto;
+    }
+
+
+
+
+    .question-answer .question-answer_list .qa-delete_btn {
+        text-decoration: none;
+        color: white;
+        padding: 5px 15px;
+        background-color: #cea540;
+    }
+
+
+    .admin-header .admin-header_content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
 
     }
-}
 
 
-/*  new-question_answer */
+    @media (min-width: 760px) {
+        .admin-header .admin-header_content .admin-header_element {
+            flex-basis: 25%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #a88d49;
+        }
 
-.new-question_answer .question-answer_form .form-question_content textarea,
-.new-question_answer .question-answer_form .form-answer_content textarea {
-    width: 50vw;
-    height: 100px;
-    padding: 10px;
-}
+    }
 
-.new-question_answer .question-answer_form .form-question_content {
-    margin: 30px auto;
-}
+    @media (min-width: 0) and (max-width: 760px) {
+        .admin-header .admin-header_content .admin-header_element {
+            flex-basis: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #a88d49;
+        }
 
-.new-question_answer .question-answer_form .form-answer_content {
-    margin: 30px auto;
-}
+    }
 
-.new-question_answer {
-    margin: 30px auto;
-}
+    .admin-header .admin-header_content .admin-header_element:hover {
+        background-color: #cea540;
+    }
 
-/*全体*/
-.hidden_box {
-    margin: 2em 0;
-    /*前後の余白*/
-    padding: 0;
-}
+    .admin-header .admin-header_content .admin-header_element a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 50px;
+    }
 
-/*ボタン装飾*/
-.hidden_box label {
-    /* padding: 15px; */
-    font-weight: bold;
-    /* border: solid 2px black; */
-    cursor: pointer;
-}
+    .admin-header_section {
+        margin: 20px auto;
+    }
 
-/*ボタンホバー時*/
-/* .hidden_box label:hover {
+    .admin-header_section h2 {
+        margin: 20px auto;
+    }
+
+    .admin-header_section .admin-header_btn {
+        margin: 30px auto;
+    }
+
+    .admin-header_section .admin-header_btn a {
+        text-decoration: none;
+        height: 50px;
+        background-color: #cea540;
+        font-size: 16px;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    @media (min-width: 760px) {
+
+        .admin td,
+        .admin th {
+            border: solid 1px #cea540;
+            border-collapse: collapse;
+            font-size: 20px;
+            width: 8vw;
+            height: 4vw;
+            padding: 10px;
+
+        }
+    }
+
+    @media (min-width: 0) and (max-width: 760px) {
+
+        .admin td,
+        .admin th {
+            border: solid 1px #cea540;
+            border-collapse: collapse;
+            font-size: 10px;
+            width: 10vw;
+            height: 10vw;
+            padding: 2px;
+
+        }
+    }
+
+
+    /*  new-question_answer */
+
+    .new-question_answer .question-answer_form .form-question_content textarea,
+    .new-question_answer .question-answer_form .form-answer_content textarea {
+        width: 50vw;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .new-question_answer .question-answer_form .form-question_content {
+        margin: 30px auto;
+    }
+
+    .new-question_answer .question-answer_form .form-answer_content {
+        margin: 30px auto;
+    }
+
+    .new-question_answer {
+        margin: 30px auto;
+    }
+
+    /*全体*/
+    .hidden_box {
+        margin: 2em 0;
+        /*前後の余白*/
+        padding: 0;
+    }
+
+    /*ボタン装飾*/
+    .hidden_box label {
+        /* padding: 15px; */
+        font-weight: bold;
+        /* border: solid 2px black; */
+        cursor: pointer;
+    }
+
+    /*ボタンホバー時*/
+    /* .hidden_box label:hover {
     background: #efefef;
 } */
 
-/*チェックは見えなくする*/
-/* .hidden_box input {
+    /*チェックは見えなくする*/
+    /* .hidden_box input {
     display: none;
 } */
 
-/*中身を非表示にしておく*/
-.hidden_box .hidden_show {
-    /* height: 0; */
-    padding: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: 0.8s;
-}
+    /*中身を非表示にしておく*/
+    .hidden_box .hidden_show {
+        /* height: 0; */
+        padding: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.8s;
+    }
 
-/*クリックで中身表示*/
-.hidden_box input:checked~.hidden_show {
-    padding: 10px 0;
-    margin: 10px auto;
+    /*クリックで中身表示*/
+    .hidden_box input:checked~.hidden_show {
+        padding: 10px 0;
+        margin: 10px auto;
 
-    opacity: 1;
-}
+        opacity: 1;
+    }
 
-/* login */
-.login-section {
-    margin: 30px auto;
-    font-size: 20px;
-}
+    /* login */
+    .login-section {
+        margin: 30px auto;
+        font-size: 20px;
+    }
 
 
 
-form.new_user {
-    font-size: 16px;
-}
+    form.new_user {
+        font-size: 16px;
+    }
 
-form.new_user .field {
-    margin: 50px auto;
-}
+    form.new_user .field {
+        margin: 50px auto;
+    }
 
-form.new_user .field input {
-    padding: 10px;
-    margin: 10px auto;
-}
+    form.new_user .field input {
+        padding: 10px;
+        margin: 10px auto;
+    }
