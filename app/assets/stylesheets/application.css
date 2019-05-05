@@ -31,11 +31,14 @@ address {
     /* 2 */
     font-family: "Segoe UI Historic",
         "HGP教科書体",
-        "游教科書体",
-        "YuKyokasho",
-         "游教科書体 横用",
-         "YuKyokasho Yoko",
-        serif;
+        serif,
+        'Hiragino Kaku Gothic Pro',
+        'ヒラギノ角ゴ Pro W3',
+        'メイリオ',
+        Meiryo,
+        'ＭＳ Ｐゴシック',
+        sans-serif;
+    ;
     font-weight: normal;
     font-style: normal;
     /* box-sizing: border-box; */
