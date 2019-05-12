@@ -1,28 +1,26 @@
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-
-    <h2>新着情報一覧</h2>
-    <div class="new-post_link">
-        <%= link_to "新規投稿", new_post_path %>
-    </div>
-    <div class="post-list">
-        <% @posts.first(10).each do |p|%>
-        <div class="post-content">
-            <div class="post-content_date">
-                <%=p.date%>
-            </div>
-
-            <div class="post-content_title">
-                <%=p.title%>
-            </div>
-
-            <div class="post-content_text">
-                <%=p.content%>
-            </div>
-
-            <div class="post-content_delete">
-                <%=link_to "削除", post_path(p), method: :delete, class:"post-delete_btn"%>
-            </div>
+<h2>新着情報一覧</h2>
+<div class="new-post_link">
+    <%= link_to "新規投稿", new_post_path %>
+</div>
+<div class="post-list">
+    <% @posts.first(10).each do |p|%>
+    <div class="post-content">
+        <div class="post-content_date">
+            <%=p.date%>
         </div>
 
-        <%end%>
+        <div class="post-content_title">
+            <%=p.title%>
+        </div>
+
+        <div class="post-content_text">
+            <%=p.content%>
+        </div>
+
+        <div class="post-content_delete">
+            <%=link_to "削除", post_path(p), method: :delete, class:"post-delete_btn"%>
+        </div>
     </div>
+
+    <%end%>
+</div>
