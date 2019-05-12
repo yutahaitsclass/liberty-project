@@ -12,6 +12,7 @@ before_action :authenticate_user!
          @admin_reservation.name="name"
          @admin_reservation.phone="phone"
          @admin_reservation.email="mail@mail.com"
+         
 
     end
 
