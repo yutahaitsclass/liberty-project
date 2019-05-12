@@ -1,82 +1,84 @@
-<div class="admin-header">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <div class="admin-header">
 
-  <div class="admin-header_content">
-    <div class="admin-header_element">
-      <%= link_to "トップページ", root_path %>
-    </div>
-    <div class="admin-header_element">
-      <%= link_to "予約", "admins_path" %>
-    </div>
-    <div class="admin-header_element">
-      <%= link_to "新着情報", posts_path	 %>
-    </div>
-    <div class="admin-header_element">
-      <%= link_to "Q&A", question_answers_path %>
-    </div>
-  </div>
-</div>
+   <div class="admin-header_content">
+     <div class="admin-header_element">
+       <%= link_to "トップページ", root_path %>
+     </div>
+     <div class="admin-header_element">
+       <%= link_to "予約", "admins_path" %>
+     </div>
+     <div class="admin-header_element">
+       <%= link_to "新着情報", posts_path	 %>
+     </div>
+     <div class="admin-header_element">
+       <%= link_to "Q&A", question_answers_path %>
+     </div>
+   </div>
+ </div>
 
 
 
-<div class="admin">
-  <h2>管理者画面</h2>
-  <div class="admin-week_links">
-    <div class="admin-before_link">
-      <% if params[:times].to_i != 1 %>
-      <%= link_to "≪前の週へ", adm_path(params[:times].to_i-1), class: "arrow-btn" %>
-      <% end %>
-    </div>
-    <div class="admin-after_link">
-      <%= link_to "次の週へ≫", adm_path(params[:times].to_i+1), class: "arrow-btn" %>
-    </div>
-  </div>
-  <table>
-    <tr>
+ <div class="admin">
+   <h2>管理者画面</h2>
+   <div class="admin-week_links">
+     <div class="admin-before_link">
+       <% if params[:times].to_i != 1 %>
+       <%= link_to "≪前の週へ", adm_path(params[:times].to_i-1), class: "arrow-btn" %>
+       <% end %>
+     </div>
+     <div class="admin-after_link">
+       <%= link_to "次の週へ≫", adm_path(params[:times].to_i+1), class: "arrow-btn" %>
+     </div>
+   </div>
+   <table>
+     <tr>
 
-      <%youbi = %w[日 月 火 水 木 金 土]%>
-      <th>日程</th>
-      <th><%= "#{(@firstday  ).month}/#{(@firstday  ).day}(#{youbi[@firstday.wday]})" %></th>
-      <th><%= "#{(@firstday+1).month}/#{(@firstday+1).day}(#{youbi[(@firstday+1).wday]})" %></th>
-      <th><%= "#{(@firstday+2).month}/#{(@firstday+2).day}(#{youbi[(@firstday+2).wday]})" %></th>
-      <th><%= "#{(@firstday+3).month}/#{(@firstday+3).day}(#{youbi[(@firstday+3).wday]})" %></th>
-      <th><%= "#{(@firstday+4).month}/#{(@firstday+4).day}(#{youbi[(@firstday+4).wday]})" %></th>
-      <th><%= "#{(@firstday+5).month}/#{(@firstday+5).day}(#{youbi[(@firstday+5).wday]})" %></th>
-      <th><%= "#{(@firstday+6).month}/#{(@firstday+6).day}(#{youbi[(@firstday+6).wday]})" %></th>
-    </tr>
-    <% Reservation::SCHEDULES.each do |s|%>
-    <tr>
-      <td><%= "#{s.strftime("%H:%M")}~"%></td>
-      <% 7.times do |i| %>
-      <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
-      <%if (@firstday+i).wday==2%>
-      <td>
-        <div class="occupied">休</div>
-      </td>
-      <%elsif  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
-      <td>
-        <%= link_to  "〇", adm_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %>
-      </td>
+       <%youbi = %w[日 月 火 水 木 金 土]%>
+       <th>日程</th>
+       <th><%= "#{(@firstday  ).month}/#{(@firstday  ).day}(#{youbi[@firstday.wday]})" %></th>
+       <th><%= "#{(@firstday+1).month}/#{(@firstday+1).day}(#{youbi[(@firstday+1).wday]})" %></th>
+       <th><%= "#{(@firstday+2).month}/#{(@firstday+2).day}(#{youbi[(@firstday+2).wday]})" %></th>
+       <th><%= "#{(@firstday+3).month}/#{(@firstday+3).day}(#{youbi[(@firstday+3).wday]})" %></th>
+       <th><%= "#{(@firstday+4).month}/#{(@firstday+4).day}(#{youbi[(@firstday+4).wday]})" %></th>
+       <th><%= "#{(@firstday+5).month}/#{(@firstday+5).day}(#{youbi[(@firstday+5).wday]})" %></th>
+       <th><%= "#{(@firstday+6).month}/#{(@firstday+6).day}(#{youbi[(@firstday+6).wday]})" %></th>
+     </tr>
+     <% Reservation::SCHEDULES.each do |s|%>
+     <tr>
+       <td><%= "#{s.strftime("%H:%M")}~"%></td>
+       <% 7.times do |i| %>
+       <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
+       <%if (@firstday+i).wday==2%>
+       <td>
+         <div class="occupied">休</div>
+       </td>
+       <%elsif  @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")==nil%>
+       <td>
+         <%= link_to  "〇", adm_reservate_form_path(year: (@firstday+i).year, month: (@firstday+i).month, day: (@firstday+i).day,  hour: s.hour, minute: s.minute) ,class: "empty" %>
+       </td>
 
-      <%else%>
-      <td>
-        <div class="occupied">×
-          <div class="occupied-hover_action">
-            <ul>
-              <li><%=reservation.name%></li>
-              <li><%=reservation.phone%></li>
-              <li><%=reservation.email%></li>
-              <li><%=reservation.number%>人</li>
-              <li><%=reservation.menu%></li>
-              <li><%=reservation.remarks%></li>
-              <li><%= link_to  "削除",  reservation_path(reservation),   method:  :delete, class: "delete"  %></li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <%end%>
+       <%else%>
+       <td>
+         <div class="occupied">×
+           <div class="occupied-hover_action">
+             <ul>
+               <li><%=reservation.name%></li>
+               <li><%=reservation.phone%></li>
+               <li><%=reservation.email%></li>
+               <li><%=reservation.number%>人</li>
+               <li><%=reservation.menu%></li>
+               <li><%=reservation.remarks%></li>
+               <li><%= link_to  "削除",  reservation_path(reservation),   method:  :delete, class: "delete"  %></li>
+             </ul>
+           </div>
+         </div>
+       </td>
+       <%end%>
 
-      <% end %>
-    </tr>
-    <% end %>
-  </table>
-</div>
+       <% end %>
+     </tr>
+     <% end %>
+   </table>
+ </div>
