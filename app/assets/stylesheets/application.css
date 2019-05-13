@@ -30,16 +30,7 @@ address {
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
-    font-family:
 
-
-
-        "HGP教科書体",
-        "Segoe UI Historic",
-        'YuKyo-Medium',
-        'YuMin-Extrabold',
-
-        sans-serif;
 
     font-style: normal;
     /* box-sizing: border-box; */
@@ -55,7 +46,12 @@ address {
         line-height: 1.8;
 
 
+        font-family: "HGP教科書体",
+            "Segoe UI Historic",
+            'YuKyo-Medium',
+            'YuMin-Extrabold',
 
+            sans-serif;
         font-weight: normal;
 
 
@@ -71,6 +67,7 @@ address {
     address {
         line-height: 2;
         font-weight: lighter;
+        font-family: 'HG正楷書体-PRO', serif;
     }
 
 
