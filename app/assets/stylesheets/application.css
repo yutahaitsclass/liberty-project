@@ -24,6 +24,7 @@
  */
 
 html,
+body,
 address {
     line-height: 1.8;
     /* 1 */
