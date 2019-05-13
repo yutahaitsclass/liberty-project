@@ -1053,7 +1053,17 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 
 @media (min-width: 760px) {
 
-    .reservation td,
+    .reservation td {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 20px;
+        width: 8vw;
+        height: 4vw;
+        padding: 10px;
+
+    }
+
+
     .reservation th {
         border: solid 1px #cea540;
         border-collapse: collapse;
@@ -1067,7 +1077,17 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 
 @media (min-width: 0) and (max-width: 760px) {
 
-    .reservation td,
+    .reservation td {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 10px;
+        width: 10vw;
+        height: 10vw;
+        padding: 2px;
+
+    }
+
+
     .reservation th {
         border: solid 1px #cea540;
         border-collapse: collapse;
@@ -1165,16 +1185,54 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
     flex-basis: 30%;
 }
 
-.admin td,
-th {
-    border: solid 1px #cea540;
-    border-collapse: collapse;
-    font-size: 22px;
-    width: 8vw;
-    height: 4vw;
-    padding: 10px;
+@media (min-width: 760px) {
 
+    .admin td {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 20px;
+        width: 8vw;
+        height: 4vw;
+        padding: 10px;
+
+    }
+
+
+    .admin th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 20px;
+        width: 8vw;
+        height: 4vw;
+        padding: 10px;
+
+    }
 }
+
+@media (min-width: 0) and (max-width: 760px) {
+
+    .admin td {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 10px;
+        width: 10vw;
+        height: 10vw;
+        padding: 2px;
+
+    }
+
+
+    .admin th {
+        border: solid 1px #cea540;
+        border-collapse: collapse;
+        font-size: 10px;
+        width: 10vw;
+        height: 10vw;
+        padding: 2px;
+
+    }
+}
+
 
 .admin .occupied {
     position: relative;
