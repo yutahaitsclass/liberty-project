@@ -290,6 +290,7 @@ button,
 input {
     /* 1 */
     overflow: visible;
+    border-radius: 0;
 }
 
 tr,
@@ -317,6 +318,7 @@ button,
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
+    border-radius: 0;
 }
 
 /**
