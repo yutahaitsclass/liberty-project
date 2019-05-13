@@ -25,7 +25,7 @@
 
 html,
 address {
-    line-height: 1.5;
+    line-height: 1.8;
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
@@ -39,7 +39,16 @@ address {
         Meiryo,
         'ＭＳ Ｐゴシック',
         sans-serif;
-
+    font-family: -apple-system,
+        "HGP教科書体",
+        'UD デジタル 教科書体 NK-R',
+        serif,
+        'Hiragino Kaku Gothic Pro',
+        'ヒラギノ角ゴ Pro W3',
+        'メイリオ',
+        Meiryo,
+        'ＭＳ Ｐゴシック',
+        sans-serif;
     font-weight: normal;
     font-style: normal;
     /* box-sizing: border-box; */
