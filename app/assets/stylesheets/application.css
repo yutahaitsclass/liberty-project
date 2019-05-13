@@ -26,7 +26,7 @@
 html,
 body,
 address {
-    line-height: 1.8;
+
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
@@ -37,17 +37,37 @@ address {
         'Yu Mincho',
         serif;
 
-
-    font-family: -apple-system,
-        "HGP教科書体",
-        'UD デジタル 教科書体 NK-R',
-        '游明朝',
-        'Yu Mincho',
-        serif;
-
-    font-weight: normal;
     font-style: normal;
     /* box-sizing: border-box; */
+
+
+}
+
+@media (min-width: 760px) {
+
+    html,
+    body,
+    address {
+        line-height: 1.8;
+
+
+
+        font-weight: normal;
+
+
+
+
+    }
+}
+
+@media (min-width: 0) and (max-width: 760px) {
+
+    html,
+    body,
+    address {
+        line-height: 2;
+        font-weight: lighter;
+    }
 
 
 }
