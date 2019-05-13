@@ -1,31 +1,37 @@
-<div class="post">
-  <h2>管理者投稿画面</h2>
+<body>
+  <div class="post">
+    <h2>管理者投稿画面</h2>
 
 
-  <div class="post-form">
-    <%=form_for(@post) do |f| %>
-    <div class="post-form_date">
-      <%= f.label :date, "日程" %>
-    </div>
-    <div>
-      <%= f.date_select :date, :use_month_numbers => true, :start_year => Time.now.year-1 ,:end_year =>Time.now.year+1 %>
-    </div>
-    <div class="post-form_title">
-      <%= f.label :title, "タイトル" %>
-    </div>
-    <div>
-      <%= f.text_field :title %>
-    </div>
+    <div class="post-form">
+      <%=form_for(@post) do |f| %>
+      <div class="post-form_date">
+        <%= f.label :date, "日程" %>
+      </div>
+      <div>
+        <%= f.date_select :date, :use_month_numbers => true, :start_year => Time.now.year-1 ,:end_year =>Time.now.year+1 %>
+      </div>
+      <div class="post-form_title">
+        <%= f.label :title, "タイトル" %>
+      </div>
+      <div>
+        <%= f.text_field :title %>
+      </div>
 
-    <div class="post-form_content">
-      <%= f.label :content, "投稿内容" %>
+      <div class="post-form_content">
+        <%= f.label :content, "投稿内容" %>
+      </div>
+      <div>
+        <%= f.text_area :content %>
+      </div>
+      <div>
+        <%= f.submit "投稿" %>
+      </div>
+      <% end %>
     </div>
-    <div>
-      <%= f.text_area :content %>
-    </div>
-    <div>
-      <%= f.submit "投稿" %>
-    </div>
-    <% end %>
   </div>
-</div>
+
+
+</body>
+
+</html>
