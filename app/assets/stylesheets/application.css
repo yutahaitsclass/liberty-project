@@ -108,6 +108,7 @@ textarea {
     color: #a88d49;
     box-sizing: border-box;
     text-decoration: none;
+    border-radius: 0;
 
 }
 
