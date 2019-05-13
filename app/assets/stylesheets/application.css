@@ -37,7 +37,21 @@ address {
         'Yu Mincho',
         'YuKyo-Medium',
         'YuMin-Extrabold',
-        serif;
+        'Lato',
+        'Noto Sans JP',
+        '游ゴシック Medium',
+        '游ゴシック体',
+        'Yu Gothic Medium',
+        YuGothic,
+        'ヒラギノ角ゴ ProN',
+        'Hiragino Kaku Gothic ProN',
+        'メイリオ',
+        Meiryo,
+        'ＭＳ Ｐゴシック',
+        'MS PGothic',
+        sans-serif;
+
+
 
     font-style: normal;
     /* box-sizing: border-box; */
@@ -1158,7 +1172,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 @media (min-width: 0) and (max-width: 760px) {
     .empty {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         color: red;
     }
 
@@ -1168,7 +1182,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 
     .occupied {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         color: #cea540;
     }
 
