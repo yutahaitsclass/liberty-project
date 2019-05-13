@@ -31,13 +31,14 @@ address {
     -webkit-text-size-adjust: 100%;
     /* 2 */
     font-family: "Segoe UI Historic",
-        "HGP教科書体",
+
         'UD デジタル 教科書体 NK-R',
+        "HGP教科書体",
         '游明朝',
         'Yu Mincho',
         'YuKyo-Medium',
         'YuMin-Extrabold',
-        cursive,
+
         serif;
 
     font-style: normal;
