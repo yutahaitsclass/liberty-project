@@ -99,6 +99,7 @@ select,
 textarea {
     margin: 0 auto;
     padding: 0;
+    font-weight: lighter;
     text-align: center;
     color: #a88d49;
     box-sizing: border-box;
