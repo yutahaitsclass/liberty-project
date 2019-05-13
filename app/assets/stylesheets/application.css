@@ -46,7 +46,11 @@ address {
         line-height: 1.8;
 
 
-        font-family: "HGP教科書体",
+        font-family:
+
+
+
+            "HGP教科書体",
             "Segoe UI Historic",
             'YuKyo-Medium',
             'YuMin-Extrabold',
@@ -67,7 +71,6 @@ address {
     address {
         line-height: 2;
         font-weight: lighter;
-        font-family: 'HG正楷書体-PRO', serif;
     }
 
 
