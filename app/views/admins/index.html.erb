@@ -60,7 +60,7 @@
         </tr>
         <% Reservation::SCHEDULES.each do |s|%>
         <tr>
-          <td><%= "#{s.strftime("%H:%M")}~"%></td>
+          <td><%= "#{s.strftime("%H:%M")}"%></td>
           <% 7.times do |i| %>
           <% reservation = @reservations.find_by(schedule: "#{@firstday+i} #{s.strftime("%H:%M")}")%>
           <%if (@firstday+i).wday==2%>

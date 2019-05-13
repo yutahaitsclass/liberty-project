@@ -31,16 +31,14 @@ address {
     -webkit-text-size-adjust: 100%;
     /* 2 */
     font-family:
-        '游明朝',
-        'Yu Mincho',
-        'UD デジタル 教科書体 NK-R',
-        "Segoe UI Historic",
-        "HGP教科書体",
 
         'YuKyo-Medium',
         'YuMin-Extrabold',
 
-        serif;
+        "HGP教科書体",
+        "Segoe UI Historic",
+
+        sans-serif;
 
     font-style: normal;
     /* box-sizing: border-box; */
