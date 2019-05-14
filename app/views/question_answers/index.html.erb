@@ -33,7 +33,7 @@
               <p><span class="big">A</span><%=qa.answer%></p>
             </div>
             <div>
-              <%=link_to "削除", question_answer_path(qa), method: :delete, class:"qa-delete_btn"%>
+              <%=button_to "削除", question_answer_path(qa), method: :delete, class:"qa-delete_btn"%>
             </div>
           </div>
           <%end%>
