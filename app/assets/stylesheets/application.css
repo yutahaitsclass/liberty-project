@@ -71,7 +71,15 @@ address {
     address {
         line-height: 2;
         font-weight: lighter;
+        font-family: "HGP教科書体",
+            "Segoe UI Historic",
+            'YuKyo-Medium',
+            'YuMin-Extrabold',
+
+            sans-serif;
+        font-weight: normal;
     }
+
 
 
 }
