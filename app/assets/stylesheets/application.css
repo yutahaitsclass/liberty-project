@@ -38,7 +38,7 @@ address {
 
 }
 
-@media (min-width: 760px) {
+@media (min-width: 500px) {
 
     html,
     body,
@@ -64,17 +64,14 @@ address {
     }
 }
 
-@media (min-width: 0) and (max-width: 760px) {
+@media (min-width: 0) and (max-width: 500px) {
 
     html,
     body,
     address {
         line-height: 2;
         font-weight: lighter;
-        font-family: "HGP教科書体",
-            "Segoe UI Historic",
-            'YuKyo-Medium',
-            'YuMin-Extrabold',
+        font-family:
 
             sans-serif;
         font-weight: normal;
