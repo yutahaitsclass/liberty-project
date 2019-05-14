@@ -71,9 +71,7 @@ address {
     address {
         line-height: 2;
         font-weight: lighter;
-        font-family:
-
-            sans-serif;
+        font-family: serif;
 
     }
 
@@ -1436,7 +1434,7 @@ footer .footer-wrapper .footer-content .footer-content_map iframe {
 .new-reservation .new-reservation_form .cancel-policy .cancel-policy_list {
     margin: 20px auto;
 
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .new-reservation .new-reservation_form .cancel-policy p {
@@ -1740,7 +1738,7 @@ button,
 /*ボタン装飾*/
 .hidden_box label {
     /* padding: 15px; */
-    font-weight: bold;
+    font-weight: normal;
     /* border: solid 2px black; */
     cursor: pointer;
 }
