@@ -33,7 +33,7 @@ class ReservationsController < ApplicationController
     def destroy
         @reservation=Reservation.find(params[:id])
         @reservation.destroy!
-        redirect_to root_url
+        redirect_to "/reservate/1"
         # render plain: params.inspect
     end
     
